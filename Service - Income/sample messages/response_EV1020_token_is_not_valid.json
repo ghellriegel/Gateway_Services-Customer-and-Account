@@ -3,7 +3,7 @@
     {
       "code": "EV1020",
       "type": "security",
-      "message": "Authentication failure means the token provided is not valid"
+      "message": "Authentication failure means the token (JWT or OAuth) provided is not valid"
     }
   ]
 }
