@@ -9,7 +9,7 @@ The objective of this API is to allow transaction data services (TDS) software p
 
 ## Key Features:
 * View and download [build packs for Push Notifications](Build%20pack%20-%20Bill%20API.pdf)
-* View and download [YAML file](Customer%20API.yaml)
+* View and download [YAML file](Bill%20API%202020-03-09.yaml)
 
 ## Products using this service:
 * [Transaction Data Services TDS](../Product%20-%20Transaction%20Data%20Services/)
