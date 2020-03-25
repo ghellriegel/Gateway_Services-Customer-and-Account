@@ -1,9 +1,0 @@
-{
-    "errors": [
-        {
-            "code": "IR002",
-            "type": "validation",
-            "message": "The NZBN supplied does not match the customer"
-        }
-    ]
-}
