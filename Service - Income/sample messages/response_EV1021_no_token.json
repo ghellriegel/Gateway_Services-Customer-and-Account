@@ -3,7 +3,7 @@
     {
       "code": "EV1021",
       "type": "security",
-      "message": "No token in present as an HTTP header"
+      "message": "No OAuth or JWT token is present as an HTTP header"
     }
   ]
 }
