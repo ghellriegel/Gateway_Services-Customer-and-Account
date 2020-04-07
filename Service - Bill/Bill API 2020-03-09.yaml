@@ -1,10 +1,10 @@
 swagger: '2.0'
 info: 
-  title: Customer API
-  description: 'REST APIs for retrieving customer, account, period, and bill item data.'
+  title: Bill API
+  description: This API will be used by approved organisations to retrieve bill item and provisional tax information from Inland Revenue.
   version: ""
-host: 'eservices-test7-gateway.npnsp.ird.govt.nz'
-basePath: /secure/gateway/customer/
+host: test3.services.ird.govt.nz
+basePath: /secure/gateway/bill/
 schemes: 
   - https
 paths: 
@@ -34,6 +34,10 @@ paths:
           description: 'HttpStatus: 400 - BadRequest'
           schema: 
             $ref: '#/definitions/bill_POST_Response400'
+        '401': 
+          description: 'HttpStatus: 401 - Unauthorized'
+          schema: 
+            $ref: '#/definitions/bill_POST_Response401'
         '404': 
           description: 'HttpStatus: 404 - NotFound'
           schema: 
@@ -130,7 +134,6 @@ definitions:
           description: Provisional method history object
           required: 
             - MethodKey
-            - Version
             - Method
             - TaxYear
             - Commence
@@ -142,10 +145,6 @@ definitions:
               description: Unique identifier for the provisional method.
               maxLength: 10
               minLength: 3
-            Version: 
-              type: string
-              description: Version of provisional tax method. Value of 0 indicates that the method has not seen any changes since its creation.
-              minLength: 1
             Method: 
               type: string
               description: 'Method used. Available options are STD (standard), EST (estimation), RATIO, and AIM.'
@@ -169,12 +168,12 @@ definitions:
             Amount: 
               type: string
               description: Provisional tax method amount.
-              minLength: 1
+              minLength: 3
             Ratio: 
               type: string
               description: Provisional tax method ratio (applicable to ratio method only).
-              maxLength: 6
-              minLength: 6
+              maxLength: 5
+              minLength: 5
       ProvDetails: 
         type: object
         description: Provisional tax method details.
@@ -196,7 +195,7 @@ definitions:
             minLength: 3
           TransactionType: 
             type: string
-            description: Type of transaction associated with the bill item.
+            description: 'Type of transaction associated with the bill item. Possible values are: CNVPRV (Converted provisional tax debit), PRVDBT (Provisional instalment), RTNADR (AIM debit), RTNACR (AIM credit).'
             maxLength: 6
             minLength: 6
           FilingPeriod: 
@@ -212,11 +211,11 @@ definitions:
           Amount: 
             type: string
             description: Provisional tax instalment amount due.
-            minLength: 6
+            minLength: 4
           FITReduction: 
             type: string
             description: Provisional tax instalment FIT reduction.
-            minLength: 6
+            minLength: 4
           Method: 
             type: string
             description: 'Provisional tax instalment method that the instalment and bill item were generated for. Available options are STD (standard), EST (estimation), RATIO, and AIM.'
@@ -263,6 +262,36 @@ definitions:
             message: 
               type: string
               description: Error message
+  bill_POST_Response401: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Unauthorised array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication error</td></tr><tr><td>EV1021</td><td>Missing OAuth in the HTTP header</td></tr><tr><td>EV1022</td><td>Unauthorised delegation.</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+            type: 
+              type: string
+              description: Type of validation code returned
+            message: 
+              type: string
+              description: Error Message
   bill_POST_Response404: 
     type: object
     required: 
