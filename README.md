@@ -1,14 +1,22 @@
+
 ![IRD logo](Images/IRlogo.gif)
 ![Software Dev](Images/SoftwareDev.png)
 
-
 # Customer and Account
 
-## [Bill API](./Service%20-%20Bill/)
-> This service is an application programming interface (API) that external applications can call in real-time to retrieve information for a particular customer bill item. The response also includes provisional tax method details and history associated to the account to which the bill item belongs. 
+Use this repository to access software development kits (SDKs) for customer and account services offered through Inland Revenue's Gateway Services.
 
-## [Income API](./Service%20-%20Income/)
-> Access to the API end point is restricted to the tax management service providers who have been on-boarded to the API. Access to the Income API is currently restricted to tax intermediaries (such as tax agents and bookkeepers) and to customers using software on their own behalf.
 
-## [IRD Number Validation](./Service%20-%20IRD%20Number%20Validation/)
-> This service is an application programming interface (API) that external applications can call in real-time when enrolling a customer to validate the customerâ€™s IRD number.
+### [Bill Service](./Service%20-%20Bill)
+> The bill service provides the provisional tax assessment information held by Inland Revenue.
+### [Income Service](./Service%20-%20Income)
+> The income service enables digital service providers to retrieve a customer’s income profile data reported to Inland Revenue.
+
+
+## Related Gateway Services repositories
+
+* [Gateway Services – Access](https://github.com/InlandRevenue/Gateway_Services-Access)
+* [Gateway Services - Returns and Information](https://github.com/InlandRevenue/Gateway_Services-Returns-and-Information)
+* [Gateway Services – Communication](https://github.com/InlandRevenue/Gateway_Services-Communication)
+* [Gateway Services – Calculators](https://github.com/InlandRevenue/Gateway_Services-Calculators)
+* [Gateway Services – Transaction Data Services](https://github.com/InlandRevenue/Gateway_Services-Transaction-data-services)
