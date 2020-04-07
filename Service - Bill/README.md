@@ -1,52 +1,60 @@
+
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-# Bill API
-
-This service is an application programming interface (API) that external applications 
-can call in real-time to retrieve information for a particular customer bill item. The 
-response also includes provisional tax method details and history associated to the 
-account to which the bill item belongs. 
- 
-The objective of this API is to allow transaction data services (TDS) software providers 
-to query information that was formerly available in the Tax Agent Web Services 
-(TAWS) data feed. 
-
-## Key Documentation
+# Bill Service
 ---
-- YAML file:
+#### Release version 1.0 
+
+
+## About the service
+---
+* This service is an application programming interface (API) that external applications can call in real-time to retrieve information for a particular customer bill item. The response also includes provisional tax method details and history associated to the account to which the bill item belongs.
+* The objective of this API is to allow transaction data services (TDS) software providers to query information that was formerly available in the Tax Agent Web Services (TAWS) data feed.
+
+## Key documentation
+---
+- YAML file
 	- View and download the [Bill API YAML](Bill%20API%202020-03-09.yaml)
 
-- Income API Build Pack 
-	- [Download the build pack](Build%20pack%20-%20Bill%20API.pdf) to view data definitions of each operation and response status code definitions
+- Build pack
+	- [Download the Bill API build pack](Build%20pack%20-%20Bill%20API.pdf) to view data definitions of each operation and response status code definitions
+
+- Message samples
+	- [View message samples for requests and positive responses](#message-samples)
+
+## Environment information
+---
+- [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
 	
+- [Test environment information - URL endpoints](#test-environment-information)
+
+- [Production environment information - URL endpoint](#Production-environment-information)	
+
+
 ## Supporting services
 ---
-- Service: Identity and Access - view: [How to integrate, OAuth requests and responses message samples and build pack](../Service%20-%20Identity%20and%20Access/Latest/)	
-	
-- Message Samples
-	* [View message samples for requests and responses](#-message-samples)
+* Service: Identity and access - view: [How to integrate, OAuth requests and responses message samples and build pack]( https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* Service: [Transaction Data Services (TDS)](https://github.com/InlandRevenue/Gateway_Services-Transaction-data-services)
+
 
 ## Message Samples
 ---
-* Sample JSON payload messages:
-	* Request
-		* [Request](sample%20messages/request.json)
-			
-	* Positive response
-	    * [Positive response](sample%20messages/response_positive_response.json)			
-	
-## Products using this service:
-* [Transaction Data Services TDS](https://github.com/InlandRevenue/Gateway_Services-Transaction-data-services)
+- Sample JSON payload messages:
+	- Request
+		- [Request](sample%20messages/request.json)
+	- Positive response
+		- [Positive response](sample%20messages/response_positive_response.json)
 
-## Mock Environment Information
+
+## Mock environment information
 ---
-### Mock Emulated Services URL
+### Mock emulated service URL
 Description | URL
 ---|---
  Landing Page | https://mock-bil.ird.digitalpartner.services
  Service Path | https://mock-bil.ird.digitalpartner.services/secure/gateway/bill/bill/
-### Mock Environment Authentication
+### Mock environment authentication
    * Consumers of this mock service must be authenticated.
    * Access delegation/restriction is not emulated, and any authenticated user has access to the test data.
    * Authentication is provided by an OAuth token issued by the mock OAuth service. Any valid token issued by the mock OAuth service can be used to access this service. Please consult the [mock OAuth service documentation](https://mock-oauth.ird.digitalpartner.services/) for further details about the authentication process.
@@ -54,7 +62,7 @@ Description | URL
    ```
    Authorization: Bearer {OAuthAccessToken}
    ```
-### Document Mock Scenarios MindMap
+### Bill mock scenarios mindmap
 
 - [View larger image](images/BillAPI%20Mock%20Service%20Mindmap.png)
 ![Mock Scenarios](images/BillAPI%20Mock%20Service%20Mindmap.png)
@@ -78,6 +86,8 @@ Description | URL
     MOCK-BILL-012 | *Authorization*: (empty) | 401 | EV1021 - Missing OAuth in the HTTP header
 
 
+## Test environment information
+---
 ### Test environment URL
 | End point|  URL|
 |--|--|
@@ -87,7 +97,10 @@ Description | URL
 
 >**NOTE:** These endpoints are subject to change due to environment updates in the future. 
 
-### Prod environment URL
+
+## Production environment information
+---
+### Production environment URL
 | End point|  URL|
 |--|--|
 | Production | https://services.ird.govt.nz:4046/gateway/bill/ |
