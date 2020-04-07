@@ -1,36 +1,46 @@
+
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-# Income API 
+# Income Service 
 ---
-#### Release version 1.1
-The Income API described in this build pack document provides a mechanism for external partners to retrieve income data reported to Inland Revenue.
+#### Release version 1.0
 
->**NOTE:** The Income API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
-## Key Documentation
+## About the service
 ---
-- YAML file:
+* The Income API described in this build pack document provides a mechanism for external partners to retrieve income data reported to Inland Revenue.
+
+>**NOTE:** The Income API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 token.
+
+
+## Key documentation
+---
+- YAML file
 	- View and download the [Income API YAML](Income%20API%202020-01-28.yaml)
 
-- Income API Build Pack 
-	- [Download the build pack](Gateway%20Services%20Build%20pack%20-%20Income%20API.pdf) to view data definitions of each operation and response status code definitions
+- Build pack 
+	- [Download the Income API build pack](Gateway%20Services%20Build%20pack%20-%20Income%20API.pdf) to view data definitions of each operation and response status code definitions
 	
-- Message Samples
-	* [View message samples for requests and responses](#-message-samples)
+- Message samples
+	- [View message samples for requests and responses](#message-samples)
 
-## Environment Information
-- [Mock Environment Information - Emulated Services, MindMap and Test data](#-mock-environment-information)
 
-- [Test Environment Information - Test Scenarios Report Template and URL Endpoints](#-test-environment-information)
+## Environment information
+---
+- [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
 
-- [Production Environment Information - URL Endpoint](#-prod-environment-information)
+- [Test environment information - test scenarios report template and URL endpoints](#test-environment-information)
+
+- [Production environment information - URL endpoint](#production-environment-information)
+
 
 ## Supporting services
 ---
-- Service: Identity and Access - view: [How to integrate, OAuth requests and responses message samples and build pack](../Service%20-%20Identity%20and%20Access/Latest/)
+- Service: Identity and access - view: [How to integrate, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 
-## Message Samples
+
+## Message samples
 ---
 * Sample JSON payload messages
 	* Requests
@@ -53,22 +63,23 @@ The Income API described in this build pack document provides a mechanism for ex
 	    * Emulator response payload body: "Requested Range Not Satisfiable"
 	    * Production or test environment: body is empty. Http status reasonPhrase: "Requested Range Not Satisfiable"
 
-## Mock Environment Information
+
+## Mock environment information
 ---
-### Mock Emulated service URL
+### Mock emulated service URL
 | End point|  URL|
 |--|--|
 | Mock | https://mock-ipr.ird.digitalpartner.services/secure/gateway/income/list |
 
-### Mock scenarios MindMap
+### Income mock scenarios mindmap
 
 - [View larger image](images/Income%20API%20Emulator%20Mindmap.png)
 ![Mock Scenarios](images/Income%20API%20Emulator%20Mindmap.png)
 
 ### Test data
 
-   - The following test data can be tested in our Mock Services environment when submitting requests to the service operations
-   - This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses.
+- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
+- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses.
 
       Scenario ID | Data: IRD number | Http status | Response 
     	--- | --- | --- | ---
@@ -82,6 +93,7 @@ The Income API described in this build pack document provides a mechanism for ex
     	MOCK-51 | Any IRD number not used in any other scenarios. E.g. 023123023 | 416 | Empty response body
 
 >**NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
+
 
 ## Test environment information
 ---
@@ -97,9 +109,11 @@ The Income API described in this build pack document provides a mechanism for ex
 
 - [Download Test Scenarios report template](Income%20API%20Service%20-%20Test%20Report%20Template.docx)
 
-## Prod environment information
+
+## Production environment information
 ---
-### Prod environment URL
+### Production environment URL
 | End point|  URL|
 |--|--|
 | Production | https://services.ird.govt.nz:4046/gateway/income/list |
+
