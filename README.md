@@ -8,9 +8,9 @@ Use this repository to access software development kits (SDKs) for customer and 
 
 
 ### [Bill Service](./Service%20-%20Bill)
-> The bill service provides the provisional tax assessment information held by Inland Revenue.
+This service is an application programming interface (API) that external applications can call in real-time to retrieve information for a particular customer bill item. The response also includes provisional tax method details and history associated to the account to which the bill item belongs
 ### [Income Service](./Service%20-%20Income)
-> The income service enables digital service providers to retrieve a customer’s income profile data reported to Inland Revenue.
+The income service enables digital service providers to retrieve a customer’s income profile data reported to Inland Revenue.
 
 
 ## Related Gateway Services repositories
