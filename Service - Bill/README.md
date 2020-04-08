@@ -8,7 +8,6 @@
 
 
 ## About the service
----
 * This service is an application programming interface (API) that external applications can call in real-time to retrieve information for a particular customer bill item. The response also includes provisional tax method details and history associated to the account to which the bill item belongs.
 * The objective of this API is to allow transaction data services (TDS) software providers to query information that was formerly available in the Tax Agent Web Services (TAWS) data feed.
 
@@ -25,7 +24,7 @@
 
 ## Environment information
 ---
-- [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
+- [Mock environment information - emulated service URL, scenarios mind map and test data](#mock-environment-information)
 	
 - [Test environment information - URL endpoints](#test-environment-information)
 
@@ -91,7 +90,6 @@ Description | URL
 ### Test environment URL
 | End point|  URL|
 |--|--|
-| Mock | https://mock-bil.ird.digitalpartner.services/secure/gateway/bill/ |
 | Testing | https://test3.services.ird.govt.nz:4046/gateway/bill/|    
 | Pre-Production | https://test4.services.ird.govt.nz:4046/gateway/bill/ | 
 
