@@ -1,0 +1,291 @@
+swagger: '2.0'
+info: 
+  title: Customer Service
+  version: ""
+host: test5.services.ird.govt.nz
+basePath: '/gateway/customer-service/'
+schemes: 
+  - https
+paths: 
+  /status: 
+    get: 
+      tags: 
+        - Web Service Status
+      summary: Web Service Status
+      description: 'This web service sends a 200 HTTP response with a message body of "OK".'
+      operationId: statusGET
+      parameters: []
+      responses: 
+        default: 
+          description: ' '
+  /validateIRD: 
+    post: 
+      tags: 
+        - Validate IRD number
+      summary: Validate IRD number
+      description: ""
+      operationId: validateIRDPOST
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/validateIRD_POST_Request'
+      responses: 
+        '200': 
+          description: 'HttpStatus: 200 - OK'
+          schema: 
+            $ref: '#/definitions/validateIRD_POST_Response200'
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/validateIRD_POST_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/validateIRD_POST_Response500'
+        '429': 
+          description: 'HttpStatus: 429 - 429'
+          schema: 
+            $ref: '#/definitions/validateIRD_POST_Response429'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/validateIRD_POST_ResponseDefault'
+definitions: 
+  validateIRD_POST_Request: 
+    type: object
+    required: 
+      - IRD
+      - Classification
+      - Date
+    properties: 
+      IRD: 
+        type: string
+        description: '<p>Inland Revenue number (IRD number)</p>'
+        maxLength: 9
+        minLength: 9
+      Classification: 
+        type: string
+        description: '<p>Customer type</p>'
+        maxLength: 3
+        minLength: 3
+        enum: 
+          - IND
+          - COM
+      Date: 
+        type: string
+        format: date
+        description: '<p>Birthday of individual, commence date of non individual. This is an ISO8601 formatted date. Example: 1993-09-08</p>'
+      FormattedName: 
+        type: string
+        description: '<p>Name for non individual, or ''last,first'' for individual. Either this name or the name object must be provided. Example: Smith, John Doe</p>'
+        maxLength: 255
+      Name: 
+        type: object
+        required: 
+          - FirstName
+          - LastName
+        properties: 
+          FirstName: 
+            type: string
+            description: '<p>First name of an individual</p>'
+            maxLength: 255
+            minLength: 1
+          MiddleName: 
+            type: string
+            description: '<p>Middle name for an individual</p>'
+            maxLength: 255
+          LastName: 
+            type: string
+            description: '<p>Last name for an individual</p>'
+            maxLength: 255
+            minLength: 1
+      FormattedAddress: 
+        type: string
+        description: '<p>Address as single string. Either this address or the address object must be provided. Example: 123 Easy Street, Te Aro, Wellington 6011</p>'
+        maxLength: 255
+      Address: 
+        type: object
+        required: 
+          - Street
+          - City
+          - Country
+        properties: 
+          Street: 
+            type: string
+            description: '<p>Street of the address</p>'
+            maxLength: 60
+            minLength: 1
+          City: 
+            type: string
+            description: '<p>City of the address</p>'
+            maxLength: 50
+            minLength: 1
+          PostCode: 
+            type: string
+            description: '<p>NZBN for the non individual. If the customer has an NZBN and one is supplied in the request, an error will be returned if the customer''s NZBN does not match the one supplied. If the customer does not have an NZBN, any NZBN supplied will ignored and not used in determining if the other information provided matches.</p>'
+            maxLength: 10
+          State: 
+            type: string
+            description: '<p>State of the address</p>'
+            maxLength: 255
+          Country: 
+            type: string
+            description: '<p>Country of the address, of the ISO 3166-1 alpha-2 format</p>'
+            maxLength: 2
+            minLength: 1
+      NZBN: 
+        type: string
+        description: '<p>NZBN for the non individual. If the customer has an NZBN and one is supplied in the request, an error will be returned if the customer''s NZBN does not match the one supplied. If the customer does not have an NZBN, any NZBN supplied will ignored and not used in determining if the other information provided matches.</p>'
+        maxLength: 15
+  validateIRD_POST_Response200: 
+    type: object
+    required: 
+      - Match
+    properties: 
+      Match: 
+        type: string
+        description: '<p>Response field, indicates if a match was found for information provided</p>'
+        maxLength: 10
+        minLength: 1
+  validateIRD_POST_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>IR001</td><td>The IRD supplied is invalid or does not match the customer type</td></tr><tr><td>IR002</td><td>The NZBN supplied does not match the customer</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+                - IR001
+                - IR002
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  validateIRD_POST_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  validateIRD_POST_Response429: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>IR003</td><td>The IRD supplied has been queried too many times within the past 24 hours.</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - IR003
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  validateIRD_POST_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr><tr><td>IR001</td><td>The IRD supplied is invalid or does not match the customer type</td></tr><tr><td>IR002</td><td>The NZBN supplied does not match the customer</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+                - IR001
+                - IR002
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
