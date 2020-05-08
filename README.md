@@ -9,10 +9,12 @@ Use this repository to access software development kits (SDKs) for customer and 
 
 ### [Bill Service](./Service%20-%20Bill)
 This service is an application programming interface (API) that external applications can call in real-time to retrieve information for a particular customer bill item. The response also includes provisional tax method details and history associated to the account to which the bill item belongs
+
 ### [Income Service](./Service%20-%20Income)
-The income service enables digital service providers to retrieve a customer’s income profile data reported to Inland Revenue.
+The income service is an API that enables digital service providers to retrieve a customer’s income profile data reported to Inland Revenue.
+
 ### [IRD Number Validation](./Service%20-%20IRD%20Number%20Validation)
-IRD Number Validation service is an API which allow cloud Digital Service Providers a method of verifying IRD numbers against known demographic information. 
+This service is an API that enables digital service providers to assess whether the IRD number and the accompanying biographic attributes of a customer are consistent, and therefore whether the IRD number is likely to be correct. 
 
 ## Related Gateway Services repositories
 
