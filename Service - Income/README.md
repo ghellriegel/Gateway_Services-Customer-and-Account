@@ -101,8 +101,8 @@ MOCK-51 | Any IRD number not used in any other scenarios. E.g. 023123023 | 416 |
 ### Test environment URL
 | End point|  URL|
 |--|--|
-| Testing | https://test3.services.ird.govt.nz:4046/gateway/income/list |    
-| Pre-Production | https://test4.services.ird.govt.nz:4046/gateway/income/list | 
+| Testing | https://test5.services.ird.govt.nz:4046/gateway/income/list |    
+| Pre-Production | https://test6.services.ird.govt.nz:4046/gateway/income/list | 
 
 >**NOTE:** These endpoints are subject to change due to environment updates in the future. 
 
