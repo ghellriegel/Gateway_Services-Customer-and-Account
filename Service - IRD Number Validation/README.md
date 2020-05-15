@@ -82,8 +82,8 @@ This service supports the following message type:
 ### Test environment URL
 | End point|  URL|
 |--|--|
-- Testing : https://test3.services.ird.govt.nz:4046/Gateway/customer-service/validateIRD
-- Pre-Production : https://test5.services.ird.govt.nz:4046/Gateway/customer-service/validateIRD  
+- Testing : https://test5.services.ird.govt.nz:4046/Gateway/customer-service/validateIRD
+- Pre-Production : https://test6.services.ird.govt.nz:4046/Gateway/customer-service/validateIRD  
 
 >**NOTE:** These endpoints are subject to change due to environment updates in the future. 
 
