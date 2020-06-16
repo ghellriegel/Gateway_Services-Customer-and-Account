@@ -144,7 +144,7 @@ definitions:
               maxLength: 255
             IncomeSource: 
               type: string
-              description: 'Income source, an ID type and value; this 2-tuple identifies the employer or investment account from which the income has been earned. If this income source is unknown an empty string will be returned. '
+              description: 'Identifies by name the employer or investment account from which the income has been earned. '
               maxLength: 255
             Amount: 
               type: string
