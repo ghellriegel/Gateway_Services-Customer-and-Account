@@ -6,7 +6,9 @@
         "AccountIdType": "ACC",
         "Period": "2019-03-31",
         "Id": "1019689984",
-        "RetrieveDate": "2020-03-05"
+        "RetrieveDate": "2020-03-05",
+        "DueDate": "2018-08-28",
+        "UnderArrangement": false
     },
     "ProvMethodHistory": [
         {

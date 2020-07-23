@@ -14,7 +14,7 @@
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Bill API YAML](Bill%20API%202020-03-09.yaml)
+	- View and download the [Bill API YAML](Bill%20API%202020-05-25.yaml)
 
 - Build pack
 	- [Download the Bill API build pack](Build%20pack%20-%20Bill%20API.pdf) to view data definitions of each operation and response status code definitions
@@ -41,9 +41,9 @@
 ---
 - Sample JSON payload messages:
 	- Request
-		- [Request](sample%20messages/request.json)
+		- [Request](Sample%20Files/Request.json)
 	- Positive response
-		- [Positive response](sample%20messages/response_positive_response.json)
+		- [Positive response](Sample%20Files/response_positive_response.json)
 
 
 ## Mock environment information
@@ -52,7 +52,7 @@
 Description | URL
 ---|---
  Landing Page | https://mock-bil.ird.digitalpartner.services
- Service Path | https://mock-bil.ird.digitalpartner.services/secure/gateway/bill/bill/
+ Service Path | https://mock-bil.ird.digitalpartner.services/secure/gateway/bill/bill
 ### Mock environment authentication
    * Consumers of this mock service must be authenticated.
    * Access delegation/restriction is not emulated, and any authenticated user has access to the test data.
