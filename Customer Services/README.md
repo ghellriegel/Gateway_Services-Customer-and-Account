@@ -10,8 +10,8 @@ The 'Customer Services Suite’ is collection of APIs designed to be used togeth
 important to understand the dependencies between these when deciding which ones to implement, how to correctly sequence their adoption, how authorisation rules 
 impact access, and how to use them in general. 
 
-### [Account Service API](Service%20-%20Account)
-This Read-only API will be used by approved organisations to retrieve account information from Inland Revenue.
+### [Account Service API](Service%20-%20Account) _(Read-only)_
+This API will be used by approved organisations to retrieve account information from Inland Revenue.
 
 ### [Address Service API](Service%20-%20Address)
 The Address API provides current information about the addresses held by Inland Revenue.
@@ -22,14 +22,14 @@ The Bank Account API is used to update the bank account number as held by Inland
 ### [Contact API](Service%20-%20Contact) 
 The Contact API provides current information about the addresses held by Inland Revenue.
 
-### [Customer Service API](Service%20-%20Customer)
+### [Customer Service API](Service%20-%20Customer) _(Read-only)_
 The Customer Service API provides current customer information as held by Inland Revenue. 
 
 ### [Customer Name API](Service%20-%20Name)
 The Name API provides current customer information as held by Inland Revenue. 
 
-### [Customer Period API](Service%20-%20Period)
-The Read-only Period API provides current customer information as held by Inland Revenue. 
+### [Customer Period API](Service%20-%20Period) _(Read-only)_
+The Period API provides current customer information as held by Inland Revenue. 
 
 
 ## Customer Services REST API reference
@@ -78,7 +78,7 @@ You'll need to use different APIs depending on the service that your app provide
 | list | `POST` | This web service is used to get a list of period for a given Account ID.| 
 
 
-#### Common across all APi's - `/gateway/{api}/status`
+#### Common across all APis - `/gateway/{api}/status`
 | Service | Method | Description | 
 | :--: | :--: | -- |
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration | 
