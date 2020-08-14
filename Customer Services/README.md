@@ -2,11 +2,11 @@
 ![IRD logo](../Images/IRlogo.gif)
 ![Software Dev](../Images/SoftwareDev.png)
 
-# Customer Services 
+# Customer Services Suite
 #### Release version 1.0 
 
-## About the Customer Services
-The 'Customer Services’ is suite of APIs designed to be used together — Account, Address, Bank Account, Contact, Customer Service, Name and Period. It is 
+## About the Customer Services Suite
+The 'Customer Services Suite’ is collection of APIs designed to be used together — Account, Address, Bank Account, Contact, Customer Service, Name and Period. It is 
 important to understand the dependencies between these when deciding which ones to implement, how to correctly sequence their adoption, how authorisation rules 
 impact access, and how to use them in general. 
 
