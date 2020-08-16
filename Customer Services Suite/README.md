@@ -22,7 +22,7 @@ The Bank Account API is used to update the bank account number as held by Inland
 ### [Contact API](Contact%20API) 
 The Contact API provides current information about the addresses held by Inland Revenue.
 
-### [Customer Service API](Customer%20Service%20API) _(Read-only)_
+### [Customer API](Customer%20API) _(Read-only)_
 The Customer API provides current customer information as held by Inland Revenue. 
 
 ### [Name API](Name%20API)
