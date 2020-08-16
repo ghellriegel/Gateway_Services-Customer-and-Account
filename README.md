@@ -16,8 +16,8 @@ The income service is an API that enables digital service providers to retrieve 
 ### [IRD Number Validation](./Service%20-%20IRD%20Number%20Validation)
 This service is an API that enables digital service providers to assess whether the IRD number and the accompanying biographic attributes of a customer are consistent, and therefore whether the IRD number is likely to be correct. 
 
-### [Customer Services](./Customer%20Services)
-The 'Customer Services' is suite of APIs designed to be used together - Account, Address, Bank Account, Contact, Customer Service, Name and Period.
+### [Customer Services Suite](./Customer%20ServicesSuite%20Suite)
+The 'Customer Services Suite' is collection of APIs designed to be used together - Account, Address, Bank Account, Contact, Customer Service, Name and Period.
 
 ## Related Gateway Services repositories
 
