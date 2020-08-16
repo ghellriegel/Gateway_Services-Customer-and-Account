@@ -32,7 +32,7 @@ The Name API provides current customer information as held by Inland Revenue.
 The Period API provides current customer information as held by Inland Revenue. 
 
 
-## Customer Services REST API reference
+## Customer Services Suite REST API reference
 
 You'll need to use different APIs depending on the service that your app provides. Use the following tables to see which APIs are useful for different kinds of tasks.
 
