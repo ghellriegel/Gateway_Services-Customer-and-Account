@@ -2,25 +2,24 @@
 ![IRD logo](../../Images/IRlogo.gif)
 ![Software Dev](../../Images/SoftwareDev.png)
 
-# Income Service 
+# Account API 
 
 #### Release version 1.0
 
 
 ## About the service
 
-The Income API described in this build pack document provides a mechanism for external partners to retrieve income data reported to Inland Revenue.
+The Account API described in this build pack document provides a mechanism for external partners to retrieve account data reported to Inland Revenue.
 
->**NOTE:** The Income API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 token.
-
+>**NOTE:** The Account API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Income API YAML](Income%20API%202020-07-16.yaml)
+	- View and download the [Account API YAML](account%20API%202020-07-16.yaml)
 
 - Build pack 
-	- [Download the Income API build pack](Gateway%20Services%20Build%20pack%20-%20Income%20API.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the Account API build pack](Gateway%20Services%20Build%20pack%20-%20account%20API.pdf) to view data definitions of each operation and response status code definitions
 	
 - Message samples
 	- [View message samples for requests and responses](#message-samples)
@@ -69,13 +68,13 @@ The Income API described in this build pack document provides a mechanism for ex
 ### Mock emulated service URL
 | End point|  URL|
 |--|--|
- Landing Page | https://mock-ipr.ird.digitalpartner.services
- Service Path | https://mock-ipr.ird.digitalpartner.services/secure/gateway/income/list |
+ Landing Page | https://mock-cus.ird.digitalpartner.services
+ Service Path | https://mock-cus.ird.digitalpartner.services/secure/gateway/account/|
 
-### Income mock scenarios mindmap
+### account mock scenarios mindmap
 
-- [View larger image](images/Income%20API%20Emulator%20Mindmap.png)
-![Mock Scenarios](images/Income%20API%20Emulator%20Mindmap.png)
+- [View larger image](images/account%20API%20Emulator%20Mindmap.png)
+![Mock Scenarios](images/Account%20API%20Emulator%20Mindmap.png)
 
 ### Test data
 
@@ -88,40 +87,34 @@ Scenario ID | Data: IRD number | Http status | Response
 
 >**NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
 
+## Account API REST API
+
+|Service| Verb Action| Description
+| -- | -- | -- |
+|account | `POST` | This web service is used to get information about an Account|
+| list | `POST` | This web service is used to get a list of accounts for a customer ID |
+| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration |
 
 ## Test environment information
 ---
 ### Test environment URL
 
-#### Test-production Environment
-|Service| Verb Action| Description| URL |
-| -- | -- | -- | -- |
-|account | `POST` | This web service is used to get information about an Account| https://test5.services.ird.govt.nz:4046/gateway/account/account|
-| list | `POST` | This web service is used to get a list of accounts for a customer ID | https://test5.services.ird.govt.nz:4046/gateway/account/list|
-| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration | https://test5.services.ird.govt.nz:4046/gateway/account/status|
+#### Test-production Environment (FastSlice HTTP Header required)
 
+URL Base Path endpoint: https://test5.services.ird.govt.nz:4046/gateway/account/account/
 
 #### Pre-production Environment
-|Service| Verb Action| Description| URL |
-| -- | -- | -- | -- |
-|account | `POST` | This web service is used to get information about an Account| https://test6.services.ird.govt.nz:4046/gateway/account/account|
-| list | `POST` | This web service is used to get a list of accounts for a customer ID | https://test6.services.ird.govt.nz:4046/gateway/account/list|
-| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration | https://test6.services.ird.govt.nz:4046/gateway/account/status|
+
+URL Base Path endpoint: https://test6.services.ird.govt.nz:4046/gateway/account/account/
 
 >**NOTE:** These endpoints are subject to change due to environment updates in the future. 
 
 ### Test scenarios report template
 
-- [Download Test Scenarios report template](Income%20API%20Service%20-%20Test%20Report%20Template.docx)
-
+- [Download Test Scenarios report template](Account%20API-%20Test%20Report%20Template.docx)
 
 ## Production environment information
 ---
 ### Production environment URL
 
-
-|Service| Verb Action| Description| URL |
-| -- | -- | -- | -- |
-|account | `POST` | This web service is used to get information about an Account| https://services.ird.govt.nz:4046/gateway/account/account|
-| list | `POST` | This web service is used to get a list of accounts for a customer ID | https://services.ird.govt.nz:4046/gateway/account/list|
-| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration | https://services.ird.govt.nz:4046/gateway/account/status|
+URL Base Path endpoint: https://test5.services.ird.govt.nz:4046/gateway/account/account/
