@@ -87,7 +87,7 @@ Scenario ID | Data: IRD number | Http status | Response
 
 >**NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
 
-## Account API REST API
+## Account API REST Reference
 
 |Service| Verb Action| Description
 | -- | -- | -- |
