@@ -24,9 +24,8 @@ The Account Service API described in this build pack document provides current c
 - Message samples
 	- [View message samples for requests and responses](#message-samples)
 	
-- API Reference
+- API Reference	
 	- [View API Refence](#Account-API-REST-Reference)	
-
 
 ## Environment information
 ---
@@ -37,11 +36,12 @@ The Account Service API described in this build pack document provides current c
 - [Production environment information - URL endpoint](#production-environment-information)
 
 
+
 ## Supporting services
 ---
 - Service: Identity and access - view: [How to integrate, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 
-
+<a name="message-samples"/>
 ## Message samples
 ---
 * Sample JSON payload messages
@@ -65,6 +65,7 @@ The Account Service API described in this build pack document provides current c
 	    * Emulator response payload body: "Requested Range Not Satisfiable"
 	    * Production or test environment: body is empty. Http status reasonPhrase: "Requested Range Not Satisfiable"
 
+<a name="Account-API-REST-Reference"/>
 ## Account API REST Reference
 
 |Service| Verb Action| Description
@@ -73,6 +74,9 @@ The Account Service API described in this build pack document provides current c
 | list | `POST` | This web service is used to get a list of accounts for a customer ID |
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration |
 
+> The `status` service is not available in the mock environemnts. 
+
+<a name="mock-environment-information"/>
 ## Mock environment information
 ---
 ### Mock emulated service URL
@@ -98,18 +102,18 @@ Scenario ID | Data: IRD number | Http status | Response
 >**NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
 
 
-
+<a name="test-environment-information"/>
 ## Test environment information
 ---
 ### Test environment URL
 
 #### Test-production Environment (FastSlice HTTP Header required)
 
-URL Base Path endpoint: https://test5.services.ird.govt.nz:4046/gateway/account/account/
+* URL Base Path endpoint: https://test5.services.ird.govt.nz:4046/gateway/account/account/
 
 #### Pre-production Environment
 
-URL Base Path endpoint: https://test6.services.ird.govt.nz:4046/gateway/account/account/
+* URL Base Path endpoint: https://test6.services.ird.govt.nz:4046/gateway/account/account/
 
 >**NOTE:** These endpoints are subject to change due to environment updates in the future. 
 
@@ -117,8 +121,10 @@ URL Base Path endpoint: https://test6.services.ird.govt.nz:4046/gateway/account/
 
 - [Download Test Scenarios report template](Account%20API-%20Test%20Report%20Template.docx)
 
+
+<a name="production-environment-information"/>
 ## Production environment information
 ---
 ### Production environment URL
 
-URL Base Path endpoint: https://services.ird.govt.nz:4046/gateway/account/account/
+* URL Base Path endpoint: https://services.ird.govt.nz:4046/gateway/account/account/
