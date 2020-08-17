@@ -23,6 +23,9 @@ The Account Service API described in this build pack document provides current c
 	
 - Message samples
 	- [View message samples for requests and responses](#message-samples)
+	
+- API Reference
+	- [View API Refence](#Account-API-REST-Reference)	
 
 
 ## Environment information
@@ -62,6 +65,13 @@ The Account Service API described in this build pack document provides current c
 	    * Emulator response payload body: "Requested Range Not Satisfiable"
 	    * Production or test environment: body is empty. Http status reasonPhrase: "Requested Range Not Satisfiable"
 
+## Account API REST Reference
+
+|Service| Verb Action| Description
+| -- | -- | -- |
+|account | `POST` | This web service is used to get information about an Account|
+| list | `POST` | This web service is used to get a list of accounts for a customer ID |
+| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration |
 
 ## Mock environment information
 ---
@@ -87,13 +97,7 @@ Scenario ID | Data: IRD number | Http status | Response
 
 >**NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
 
-## Account API REST Reference
 
-|Service| Verb Action| Description
-| -- | -- | -- |
-|account | `POST` | This web service is used to get information about an Account|
-| list | `POST` | This web service is used to get a list of accounts for a customer ID |
-| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration |
 
 ## Test environment information
 ---
