@@ -6,10 +6,10 @@
 
 #### Release version 1.0
 
+## About the Account API service
 
-## About the service
-
-The Account API described in this build pack document provides a mechanism for external partners to retrieve account data reported to Inland Revenue.
+Inland Revenue has a suite of digital services available for consumption by our service providers that supports efficient, electronic business interactions with Inland Revenue. 
+The Account Service API described in this build pack document provides current customer information as held by Inland Revenue. 
 
 >**NOTE:** The Account API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
@@ -117,4 +117,4 @@ URL Base Path endpoint: https://test6.services.ird.govt.nz:4046/gateway/account/
 ---
 ### Production environment URL
 
-URL Base Path endpoint: https://test5.services.ird.govt.nz:4046/gateway/account/account/
+URL Base Path endpoint: https://services.ird.govt.nz:4046/gateway/account/account/
