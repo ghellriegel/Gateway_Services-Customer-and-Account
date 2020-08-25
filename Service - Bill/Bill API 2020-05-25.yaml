@@ -3,8 +3,8 @@ info:
   title: Bill API
   description: "A REST API service available to be used by approved organisations to retrieve information for a particular customer\u2019s bill item, and the associated provisional tax method and history from Inland Revenue.  \n\nThe Bill API has been provided for services providers using transaction data services (TDS) to query information that was formerly available in the Tax Agent Web Services (TAWS) data feed."
   version: ""
-host: 'eservices-test-gateway.npnsp.ird.govt.nz'
-basePath: /secure/gateway/bill/
+host: 'services.ird.govt.nz:4046'
+basePath: /gateway/bill/
 schemes: 
   - https
 paths: 
