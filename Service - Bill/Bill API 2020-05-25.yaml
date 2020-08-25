@@ -1,20 +1,20 @@
 swagger: '2.0'
 info: 
   title: Bill API
-  description: This API will be used by approved organisations to retrieve bill item and provisional tax information from Inland Revenue.
+  description: "A REST API service available to be used by approved organisations to retrieve information for a particular customer\u2019s bill item, and the associated provisional tax method and history from Inland Revenue.  \n\nThe Bill API has been provided for services providers using transaction data services (TDS) to query information that was formerly available in the Tax Agent Web Services (TAWS) data feed."
   version: ""
-host: test3.services.ird.govt.nz
+host: 'eservices-test-gateway.npnsp.ird.govt.nz'
 basePath: /secure/gateway/bill/
 schemes: 
   - https
 paths: 
-  /bill/: 
+  /bill: 
     post: 
       tags: 
-        - bill
+        - Customer Bill API
       summary: Customer Bill API
       description: ""
-      operationId: bill/POST
+      operationId: billPOST
       consumes: 
         - 'application/json; charset=utf-8'
       produces: 
@@ -49,7 +49,7 @@ paths:
   /status: 
     get: 
       tags: 
-        - status
+        - Web Service Status
       summary: Web Service Status
       description: 'This web service sends a 200 HTTP response with a message body of "OK".'
       operationId: statusGET
@@ -92,6 +92,8 @@ definitions:
           - Period
           - Id
           - RetrieveDate
+          - DueDate
+          - UnderArrangement
         properties: 
           CustomerId: 
             type: string
@@ -126,6 +128,14 @@ definitions:
             description: Date that the requested bill item information was retrieved.
             maxLength: 10
             minLength: 10
+          DueDate: 
+            type: string
+            description: Date that the requested bill item is due.
+            maxLength: 10
+            minLength: 10
+          UnderArrangement: 
+            type: boolean
+            description: Indicates that there is an instalment arrangement containing this bill item.
       ProvMethodHistory: 
         type: array
         description: 'All versions of provisional methods belonging to the account. Because there is no direct association between a bill item and the method that it was generated for, this object contains all history for all provisional tax methods on the account.'
