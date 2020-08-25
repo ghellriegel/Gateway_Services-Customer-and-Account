@@ -37,20 +37,20 @@ The Period API provides current customer information as held by Inland Revenue.
 You'll need to use different APIs depending on the service that your app provides. Use the following tables to see which APIs are useful for different kinds of tasks.
 
 #### Account API - `/gateway/account/{Service}`
-| Service | Method | Description | 
+| Service | HTTP request types | Description | 
 | :--: | :--: | -- |
 | account | `POST` | This web service is used to get information about an Account | 
 | list | `POST` | This web service is used to get a list of accounts for a customer ID | 
 
 #### Address API - `/gateway/address{Service}`
-| Service | Method | Description | 
-| -- | :--: | -- |
-| address | `DELETE` | This web service is used to remove an address | 
-| address | `PUT` | This web service is used to update an address | 
-| address | `POST` | This web service is used to add an address |
+| Service | HTTP request types | Description | HTTP request types | 
+| -- | :--: | -- | |
+| address | `DELETE` | This web service is used to remove an address | | 
+| address | `PUT` | This web service is used to update an address | |
+| address | `POST` | This web service is used to add an address | |
 
 #### Contact API - `/gateway/contact/{Service}`
-| Service | Method | Description | 
+| Service | HTTP request types | Description | 
 | :--: | :--: | -- |
 | contact | `POST` | This web service is used to add a contact | 
 | contact | `PUT` | This web service is used to update a contact | 
@@ -60,13 +60,13 @@ You'll need to use different APIs depending on the service that your app provide
 | phone | `DELETE` | This web service is used to update a phone number on an existing contact | 
 
 #### Customer API - `/gateway/customer/{Service}`
-| Service | Method | Description | 
+| Service | HTTP request types | Description | 
 | :--: | :--: | -- |
 | customer | `POST` | This web service is used to get information about a Customer |
 
 
 #### Name API - `/gateway/name/{Service}`
-| Service | Method | Description | 
+| Service | HTTP request types | Description | 
 | :--: | :--: | -- |
 | name | `POST` | This web service creates names in START |
 | name | `PUT` | This web service updates names in START |
