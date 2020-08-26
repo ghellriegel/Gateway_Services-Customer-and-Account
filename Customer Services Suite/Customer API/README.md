@@ -87,8 +87,8 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 
 ### Customer mock scenarios mindmap
 
-- [View larger image](../images/Customer%20API%20Mock%20Service.png)
-![Mock Scenarios](../images/Customer%20API%20Mock%20Service.png)
+- [View larger image](../../images/Customer%20API%20Mock%20Service.png)
+![Mock Scenarios](../../images/Customer%20API%20Mock%20Service.png)
 
 ### Test data
 
