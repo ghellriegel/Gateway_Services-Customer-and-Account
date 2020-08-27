@@ -68,10 +68,10 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 <a name="Customer-API-REST-Reference"></a>
 ## Customer API REST Reference
 
-|Service| Verb Action| Description
-| -- | -- | -- |
-|Customer | `POST` | This web service is used to get information about an Customer|
-| list | `POST` | This web service is used to get a list of Customers for a customer ID |
+#### Customer API - `/gateway/customer/{Service}`
+| Service | HTTP request types | Description | 
+| :--: | :--: | -- |
+| customer | `POST` | This web service is used to get information about a Customer |
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration |
 
 > The `status` service is not available in the mock environemnts. 
@@ -87,8 +87,8 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 
 ### Customer mock scenarios mindmap
 
-- [View larger image](../../images/Customer%20API%20Mock%20Service.png)
-![Mock Scenarios](../../images/Customer%20API%20Mock%20Service.png)
+- [View larger image](../images/Customer%20API%20Mock%20Service.png)
+![Mock Scenarios](../images/Customer%20API%20Mock%20Service.png)
 
 ### Test data
 
