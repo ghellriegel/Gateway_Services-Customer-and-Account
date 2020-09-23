@@ -1,9 +1,0 @@
-{
-    "errors": [
-        {
-            "code": "CNT102",
-            "type": "validation",
-            "message": "The phone number provided is invalid."
-        }
-    ]
-}

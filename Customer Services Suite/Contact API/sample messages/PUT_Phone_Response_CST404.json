@@ -1,9 +1,0 @@
-{
-    "errors": [
-        {
-            "code": "CST404",
-            "type": "validation",
-            "message": "A record could not be located for the given identifier."
-        }
-    ]
-}
