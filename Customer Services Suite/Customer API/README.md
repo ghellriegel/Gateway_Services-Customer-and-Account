@@ -93,10 +93,19 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 ### Test data
 
 - The following test data can be tested in our Mock Services environment when submitting requests to the service operations
-- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses.
+
 
 Scenario ID | Data: IRD number | Http status | Response 
 --- | --- | --- | ---
+
+| Persona | IRD number ("CustomerIDType": "IRD") | IRD number ("CustomerIDType": "CST")| IRD number ("CustomerIDType": "ACC")| Address ID|  ContactID | Name ID | Phone ID|
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| INDIVIDUAL | 132243158 |  | <ul> <li>132243158FAM005</li><li>132243158GST004</li><li>132243158INC003</li><li>132243158DSB006 (For error BNK102 only)</li><li>132243158FBT005 (For errors BNK101, CNT101 and NAM101)</li></ul>| | | |
+| NON_INDIVIDUAL |  069096409 | | | | | |		
+| ANOTHER_CUSTOMER1 |  139369673 | | 139369673INC002	| 1004448885551| | |
+ 
+ 
+ 
 
 
 > **NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.

@@ -43,11 +43,17 @@ You'll need to use different APIs depending on the service that your app provide
 | list | `POST` | This web service is used to get a list of accounts for a customer ID | 
 
 #### Address API - `/gateway/address{Service}`
+| Service | HTTP request types | Description |
+| -- | :--: | -- | 
+| address | `DELETE` | This web service is used to remove an address | 
+| address | `PUT` | This web service is used to update an address | 
+| address | `POST` | This web service is used to add an address | 
+
+#### Bank API - `/gateway/bank{Service}`
 | Service | HTTP request types | Description | HTTP request types | 
-| -- | :--: | -- | |
-| address | `DELETE` | This web service is used to remove an address | | 
-| address | `PUT` | This web service is used to update an address | |
-| address | `POST` | This web service is used to add an address | |
+| -- | :--: | -- | 
+|  bank |  `DELETE` | This web service is used to remove a bank account from an account  |
+|  bank |  `POST` | This web service is used to add a bank account to an account  |
 
 #### Contact API - `/gateway/contact/{Service}`
 | Service | HTTP request types | Description | 
