@@ -1,0 +1,101 @@
+
+![IRD logo](../../Images/IRlogo.gif)
+![Software Dev](../../Images/SoftwareDev.png)
+
+# Address API 
+
+#### Release version 1.0
+
+## About the Address API service
+
+Inland Revenue has a suite of digital services available for consumption by our service providers that supports efficient, electronic business interactions with Inland Revenue. 
+The Address Service API described in this build pack document provides current customer information as held by Inland Revenue. 
+
+>**NOTE:** The Address API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
+
+## Key documentation
+---
+- YAML file
+	- View and download the [Address API YAML](Address%20API%202020-07-16.yaml)
+
+- Build pack 
+	- [Download the Address API build pack](Gateway%20Services%20Build%20pack%20-%20Address%20API.pdf) to view data definitions of each operation and response status code definitions
+	
+- API Reference	
+	- [View API Refence](#Address-API-REST-Reference)	
+
+## Environment information
+---
+- [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
+
+- [Test environment information - URL endpoints](#test-environment-information)
+
+- [Production environment information - URL endpoint](#production-environment-information)
+
+- [URL Endpoints and API reference ](#URL-endpoints)
+
+## Supporting services
+---- 
+
+Service: Identity and access - view: [How to integrate, OAuth & JWT requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+
+
+<a name="URL-endpoints"></a>
+### URL Endpoints and API Reference
+
+| Environment | Scheme Authority |  
+| --- | --- |
+| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`|
+| Production (PROD) | `https://services.ird.govt.nz:4046`|
+
+
+<a name="Address-API-REST-Reference"></a>
+## Address API REST Reference
+
+#### Address API - `/gateway/address{Service}`
+| Service | HTTP request types | Description |  
+| -- | :--: | -- | 
+| address | `DELETE` | This web service is used to remove an address | 
+| address | `PUT` | This web service is used to update an address | 
+| address | `POST` | This web service is used to add an address | 
+| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration |
+
+> The `status` service is not available in the mock environemnts. 
+
+<a name="mock-environment-information"></a>
+## Mock environment information
+---
+### Mock emulated service URL
+| End point|  URL|
+|--|--|
+ Landing Page | https://mock-cus.ird.digitalpartner.services
+ Service Path | https://mock-cus.ird.digitalpartner.services/gateway/address/|
+
+### Address mock scenarios mindmap
+
+- [View larger image](../images/Address%20API%20Emulator%20Mindmap.png)
+![Mock Scenarios](../images/Address%20API%20Emulator%20Mindmap.png)
+
+<a name="test-environment-information"></a>
+## Test environment information
+
+### Test scenarios report template
+
+- [Download Test Scenarios report template](Address%20API-%20Test%20Report%20Template.docx)
+
+
+<a name="production-environment-information"></a>
+## Production environment information
+
+### Production environment URL
+
+* URL Base Path endpoint: https://services.ird.govt.nz:4046/gateway/address/
+
+
+### URL Endpoints and API Reference
+
+| Environment | Scheme Authority |  
+| --- | --- |
+| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`|
+| Production (PROD) | `https://services.ird.govt.nz:4046`|
+
