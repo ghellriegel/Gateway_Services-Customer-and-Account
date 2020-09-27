@@ -52,8 +52,8 @@ You'll need to use different APIs depending on the service that your app provide
 #### Bank API - `/gateway/bank{Service}`
 | Service | HTTP request types | Description | HTTP request types | 
 | -- | :--: | -- | 
-|  bank |  `DELETE` | This web service is used to remove a bank account from an account  |
-|  bank |  `POST` | This web service is used to add a bank account to an account  |
+| bank |  `DELETE` | This web service is used to remove a bank account from an account  |
+| bank |  `POST` | This web service is used to add a bank account to an account  |
 
 #### Contact API - `/gateway/contact/{Service}`
 | Service | HTTP request types | Description | 
