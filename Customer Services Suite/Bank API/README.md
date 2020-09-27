@@ -21,9 +21,7 @@ The Bank Service API described in this build pack document provides current cust
 - Build pack 
 	- [Download the Bank API build pack](Gateway%20Services%20Build%20pack%20-%20Bank%20API.pdf) to view data definitions of each operation and response status code definitions
 	
-- Message samples
-	- [View message samples for requests and responses](#message-samples)
-	
+
 - API Reference	
 	- [View API Refence](#Bank-API-REST-Reference)	
 
@@ -45,10 +43,10 @@ Service: Identity and access - view: [How to integrate, OAuth, JWT requests and 
 <a name="Bank-API-REST-Reference"></a>
 ## Bank API REST Reference
 
-#### Bank API - `/gateway/bank{Service}`
+#### Bank API - `/gateway/bank/{Service}`
 
 
-> The `status` service is not available in the mock environemnts. 
+> *NOTE:* The `status` service is not available in the mock environemnts. 
 
 <a name="mock-environment-information"></a>
 ## Mock environment information
@@ -64,10 +62,6 @@ Service: Identity and access - view: [How to integrate, OAuth, JWT requests and 
 - [View larger image](../images/Bank%20API%20Mock%20Service.png)
 ![Mock Scenarios](../images/Bank%20API%20Mock%20Service.png)
 
-### Test data
-
-- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
-- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses.
 
 > **NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
 
@@ -83,12 +77,6 @@ Service: Identity and access - view: [How to integrate, OAuth, JWT requests and 
 
 <a name="URL-endpoints"></a>
 ### URL Endpoints and API Reference
-
-| Environment | Scheme Authority |  
-| --- | --- |
-| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`|
-| Production (PROD) | `https://services.ird.govt.nz:4046`|
-
 
 | Service | HTTP request types | Description | 
 | -- | :--: | -- | 
