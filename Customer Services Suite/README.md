@@ -10,6 +10,10 @@ The 'Customer Services Suite’ is collection of APIs designed to be used togeth
 important to understand the dependencies between these when deciding which ones to implement, how to correctly sequence their adoption, how authorisation rules 
 impact access, and how to use them in general. 
 
+![Customer APIs START Data Model](images/customer%20DM2.png)
+ View larger [Customer APIs](images/customer%20DM3.png) diagram
+
+
 ### [Account API](Account%20API) _(Read-only)_
 This API will be used by approved organisations to retrieve account information from Inland Revenue.
 
@@ -32,6 +36,8 @@ The Name API provides current customer information as held by Inland Revenue.
 The Period API provides current customer information as held by Inland Revenue. 
 
 
+
+
 ## Customer Services Suite REST API reference
 
 You'll need to use different APIs depending on the service that your app provides. Use the following tables to see which APIs are useful for different kinds of tasks.
@@ -42,14 +48,14 @@ You'll need to use different APIs depending on the service that your app provide
 | account | `POST` | This web service is used to get information about an Account | 
 | list | `POST` | This web service is used to get a list of accounts for a customer ID | 
 
-#### Address API - `/gateway/address{Service}`
+#### Address API - `/gateway/address/{Service}`
 | Service | HTTP request types | Description |
 | -- | :--: | -- | 
 | address | `DELETE` | This web service is used to remove an address | 
 | address | `PUT` | This web service is used to update an address | 
 | address | `POST` | This web service is used to add an address | 
 
-#### Bank API - `/gateway/bank{Service}`
+#### Bank API - `/gateway/bank/{Service}`
 | Service | HTTP request types | Description | 
 | -- | :--: | -- | 
 | bank |  `DELETE` | This web service is used to remove a bank account from an account  |
