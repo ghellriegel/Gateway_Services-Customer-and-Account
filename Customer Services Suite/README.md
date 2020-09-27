@@ -50,7 +50,7 @@ You'll need to use different APIs depending on the service that your app provide
 | address | `POST` | This web service is used to add an address | 
 
 #### Bank API - `/gateway/bank{Service}`
-| Service | HTTP request types | Description | HTTP request types | 
+| Service | HTTP request types | Description | 
 | -- | :--: | -- | 
 | bank |  `DELETE` | This web service is used to remove a bank account from an account  |
 | bank |  `POST` | This web service is used to add a bank account to an account  |
