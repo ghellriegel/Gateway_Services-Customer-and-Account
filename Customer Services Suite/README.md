@@ -20,7 +20,7 @@ This API will be used by approved organisations to retrieve account information 
 ### [Address API](Address%20API)
 The Address API provides current information about the addresses held by Inland Revenue.
 
-### [Bank Account API](Bank%20Account%20API) 
+### [Bank Account API](Bank%20API) 
 The Bank Account API is used to update the bank account number as held by Inland Revenue.
 
 ### [Contact API](Contact%20API) 
