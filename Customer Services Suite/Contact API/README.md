@@ -16,10 +16,10 @@ The Contact Service API described in this build pack document provides current c
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Contact API YAML](Contact%20API%202020-07-16.yaml)
+	- View and download the [Contact API YAML](Contact%202020-08-11.yaml)
 
 - Build pack 
-	- [Download the Contact API build pack](Gateway%20Services%20Build%20pack%20-%20Contact%20API.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the Contact API build pack](Build%20pack%20-%20Contact%20API.pdf) to view data definitions of each operation and response status code definitions
 	
 - API Reference	
 	- [View API Refence](#Contact-API-REST-Reference)	
