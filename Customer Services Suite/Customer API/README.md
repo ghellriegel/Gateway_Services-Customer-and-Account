@@ -16,10 +16,10 @@ The Customer API described in this build pack document provides current customer
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Customer API YAML](Customer%20API%202020-07-16.yaml)
+	- View and download the [Customer API YAML](Customer%202020-08-05.yaml)
 
 - Build pack 
-	- [Download the Customer API build pack](Gateway%20Services%20Build%20pack%20-%20Customer%20API.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the Customer API build pack](Build%20pack%20-%20Customer%20Service%20API.pdf) to view data definitions of each operation and response status code definitions
 	
 - API Reference	
 	- [View API Refence](#Customer-API-REST-Reference)	

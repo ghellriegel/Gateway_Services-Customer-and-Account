@@ -52,10 +52,10 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 ## Mock environment information
 ---
 ### Mock emulated service URL
-| End point|  URL|
+| End point | URL |
 |--|--|
- Landing Page | https://mock-cus.ird.digitalpartner.services
- Service Path | https://mock-cus.ird.digitalpartner.services/gateway/Contact/|
+| Landing Page | https://mock-cus.ird.digitalpartner.services |
+| Service Path | https://mock-cus.ird.digitalpartner.services/gateway/contact/|
 
 ### Contact mock scenarios mindmap
 

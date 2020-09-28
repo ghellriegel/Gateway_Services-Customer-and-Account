@@ -16,10 +16,10 @@ The Period Service API described in this build pack document provides current cu
 ## Key documentation
 
 - YAML file
-	- View and download the [Period API YAML](Period%20API%202020-07-16.yaml)
+	- View and download the [Period API YAML](Period%202020-08-06.yaml)
 
 - Build pack 
-	- [Download the Period API build pack](Gateway%20Services%20Build%20pack%20-%20Period%20API.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the Period API build pack](Build%20pack%20-%20Period%20Service%20API.pdf) to view data definitions of each operation and response status code definitions
 	
 ## Environment information
 
