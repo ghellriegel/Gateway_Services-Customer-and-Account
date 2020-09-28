@@ -16,7 +16,7 @@ The Bank Service API described in this build pack document provides current cust
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Bank API YAML](Bank%202020-08-05.yaml)
+	- View and download the [Bank API YAML](Bank%202020-09-28.yaml)
 
 - Build pack 
 	- [Download the Bank API build pack](Build%20pack%20-%20Bank%20Account%20API.pdf) to view data definitions of each operation and response status code definitions

@@ -4,7 +4,7 @@
 
 # Contact API 
 
-#### Release version 1.0
+#### Release version 1.0 - Coming Soon. 
 
 ## About the Contact API service
 
@@ -16,7 +16,7 @@ The Contact Service API described in this build pack document provides current c
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Contact API YAML](Contact%202020-08-11.yaml)
+	- View and download the [Contact API YAML](Contact%202020-09-28.yaml)
 
 - Build pack 
 	- [Download the Contact API build pack](Build%20pack%20-%20Contact%20API.pdf) to view data definitions of each operation and response status code definitions

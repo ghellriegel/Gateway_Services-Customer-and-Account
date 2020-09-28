@@ -4,7 +4,7 @@
 
 # Name API 
 
-#### Release version 1.0
+#### Release version 1.0 - Coming Soon. 
 
 ## About the Name API service
 
@@ -16,13 +16,10 @@ The Name Service API described in this build pack document provides current cust
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Name API YAML](Name%202020-08-05.yaml)
+	- View and download the [Name API YAML](Name%202020-09-28.yaml)
 
 - Build pack 
 	- [Download the Name API build pack](Build%20pack%20-%20Name%20API.pdf) to view data definitions of each operation and response status code definitions
-	
-- Message samples
-	- [View message samples for requests and responses](#message-samples)
 	
 - API Reference	
 	- [View API Refence](#Name-API-REST-Reference)	
@@ -36,41 +33,15 @@ The Name Service API described in this build pack document provides current cust
 - [Production environment information - URL endpoint](#production-environment-information)
 
 ## Supporting services
----- 
-
+---
 Service: Identity and access - view: [How to integrate, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
-
-<a name="message-samples"></a>
-## Message samples
-----
-
-### Sample JSON payload messages
-* Requests
-	* [Request with end date](sample%20messages/request_with_end_date.json)
-	* [Request without end date](sample%20messages/request_without_end_date.json)
-	
-* Positive response
-	* [Positive response](sample%20messages/response_positive_response.json)
-	
-* Negative response - http 400
-	* [EV1020 - Token not valid](sample%20messages/response_EV1020_token_is_not_valid.json)
-	* [EV1021 - No token](sample%20messages/response_EV1021_no_token.json)
-	* [EV1022 - Access is not permitted](sample%20messages/response_EV1022_access_is_not_permitted.json)
-	* [EV1100 - Invalid input parameter](sample%20messages/response_EV1100_invalid_input_parameter.json)
-	* [EV1200 - Exceeds the maximum limit](sample%20messages/response_EV1200_exceed_the_max_limit.json)
-	* [EV2234 - IR number failed check digit](sample%20messages/response_EV2234_IR_failed_check_digit.json)
-	* [EV2235 - IR number not found](sample%20messages/response_EV2235_IR_not_found.json)
-	
-* Negative response - http 416
-	* Emulator response payload body: "Requested Range Not Satisfiable"
-	* Production or test environment: body is empty. Http status reasonPhrase: "Requested Range Not Satisfiable"
 
 <a name="Name-API-REST-Reference"></a>
 ## Name API REST Reference
 
-|Service| Verb Action| Description
+|Service| Verb Action| Description|
 | -- | -- | -- |
-|Name | `POST` | This web service is used to get information about an Name|
+| Name | `POST` | This web service is used to get information about an Name|
 | list | `POST` | This web service is used to get a list of Names for a customer ID |
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration |
 
@@ -80,51 +51,28 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 ## Mock environment information
 ---
 ### Mock emulated service URL
-| End point|  URL|
-|--|--|
- Landing Page | https://mock-cus.ird.digitalpartner.services
- Service Path | https://mock-cus.ird.digitalpartner.services/secure/gateway/Name/|
+| End point | URL|
+| -- | -- |
+| Landing Page | https://mock-cus.ird.digitalpartner.services | 
+| Service Path | https://mock-cus.ird.digitalpartner.services/gateway/name/|
 
 ### Name mock scenarios mindmap
 
 - [View larger image](images/Name%20API%20Emulator%20Mindmap.png)
 ![Mock Scenarios](images/Name%20API%20Emulator%20Mindmap.png)
 
-### Test data
-
-- The following test data can be tested in our Mock Services environment when submitting requests to the service operations
-- This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses.
-
-Scenario ID | Data: IRD number | Http status | Response 
---- | --- | --- | ---
-
-
 > **NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
-
 
 <a name="test-environment-information"></a>
 ## Test environment information
 ---
-### Test environment URL
-
-#### Test-production Environment (FastSlice HTTP Header required)
-
-* URL Base Path endpoint: https://test5.services.ird.govt.nz:4046/gateway/Name/Name/
-
-#### Pre-production Environment
-
-* URL Base Path endpoint: https://test6.services.ird.govt.nz:4046/gateway/Name/Name/
-
->**NOTE:** These endpoints are subject to change due to environment updates in the future. 
-
 ### Test scenarios report template
 
 - [Download Test Scenarios report template](Name%20API-%20Test%20Report%20Template.docx)
-
 
 <a name="production-environment-information"></a>
 ## Production environment information
 ---
 ### Production environment URL
 
-* URL Base Path endpoint: https://services.ird.govt.nz:4046/gateway/Name/Name/
+* URL Base Path endpoint: https://services.ird.govt.nz:4046/gateway/name/

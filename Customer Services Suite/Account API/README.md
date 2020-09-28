@@ -16,7 +16,7 @@ The Account Service API described in this build pack document provides current c
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Account API YAML](Account%202020-09-23.yaml)
+	- View and download the [Account API YAML](Account%202020-09-28.yaml)
 
 - Build pack 
 	- [Download the Account API build pack](Build%20pack%20-%20Account%20Service%20API.pdf) to view data definitions of each operation and response status code definitions
@@ -57,8 +57,8 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 
 ### Account mock scenarios mindmap
 
-- [View larger image](../images/account%20API%20Emulator%20Mindmap.png)
-![Mock Scenarios](../images/Account%20API%20Emulator%20Mindmap.png)
+- [View larger image](../images/Account%20API%20Mock%20Service.png)
+![Mock Scenarios](../images/Account%20API%20Mock%20Service.png)
 
 > **NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
 

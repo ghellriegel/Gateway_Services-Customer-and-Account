@@ -16,7 +16,7 @@ The Address Service API described in this build pack document provides current c
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Address API YAML](Address%202020-08-05.yaml)
+	- View and download the [Address API YAML](Address%202020-09-28.yaml)
 
 - Build pack 
 	- [Download the Address API build pack](Build%20pack%20-%20Address%20API.pdf) to view data definitions of each operation and response status code definitions
@@ -73,8 +73,8 @@ Service: Identity and access - view: [How to integrate, OAuth & JWT requests and
 
 ### Address mock scenarios mindmap
 
-- [View larger image](../images/Address%20API%20Emulator%20Mindmap.png)
-![Mock Scenarios](../images/Address%20API%20Emulator%20Mindmap.png)
+- [View larger image](../images/Address%20API%20Mock%20Service.png)
+![Mock Scenarios](../images/Address%20API%20Mock%20Service.png)
 
 <a name="test-environment-information"></a>
 ## Test environment information
