@@ -26,8 +26,6 @@
 ---
 - [Mock environment information - emulated service URL, scenarios mind map and test data](#mock-environment-information)
 	
-- [Test environment information - URL endpoints](#test-environment-information)
-
 - [Production environment information - URL endpoint](#Production-environment-information)	
 
 
@@ -49,10 +47,11 @@
 ## Mock environment information
 ---
 ### Mock emulated service URL
-Description | URL
----|---
- Landing Page | https://mock-bil.ird.digitalpartner.services
- Service Path | https://mock-bil.ird.digitalpartner.services/secure/gateway/bill/bill
+|Description | URL|
+|---|---|
+| Landing Page | https://mock-bil.ird.digitalpartner.services|
+| Service Path | https://mock-bil.ird.digitalpartner.services/secure/gateway/bill/bill|
+ 
 ### Mock environment authentication
    * Consumers of this mock service must be authenticated.
    * Access delegation/restriction is not emulated, and any authenticated user has access to the test data.
@@ -71,29 +70,22 @@ Description | URL
 * This table shows which scenarios (as per their numbers in the mindmap) require specific data to trigger the expected responses.
 * Text in italics represents the name of a request header or field in the request body.
 
-  Scenario ID | Data | Http status | Response 
-    --- | --- | --- | ---
-    MOCK-BILL-001 | *Bill.Id*: "1058166784" | 200 | Bill Item & Provisional Tax details
-    MOCK-BILL-002 | *Bill.Id*: "1411815424" | 200 | Bill Item & Provisional Tax details
-    MOCK-BILL-003 | *Bill.Id*: "865310720" | 200 | Bill Item & Provisional Tax details
-    MOCK-BILL-004 | *Bill.Id*: "282290176" | 200 | Bill Item & Provisional Tax details
-    MOCK-BILL-005 | *Bill.Id*: "1804888576" | 401 | EV1022 - Unauthorised delegation.
-    MOCK-BILL-008 | *Bill*: {"Invalid": true} | 400 | EV1100 - Incoming content contains invalid field names or field/value lengths exceeding 255 characters.
-    MOCK-BILL-009 | *Bill*: {} | 400 | EV2000 - Mandatory field - Bill.Id  - is missing
-    MOCK-BILL-010 | *Bill.Id*: "123" | 404 | ER5000 - No bill item found with input data
-    MOCK-BILL-011 | *Authorization*: "Bearer invalidtoken" | 401 | EV1020 - Authentication error
-    MOCK-BILL-012 | *Authorization*: (empty) | 401 | EV1021 - Missing OAuth in the HTTP header
+|  Scenario ID | Data | Http status | Response |
+|--- | --- | --- | ---|
+|MOCK-BILL-001 | *Bill.Id*: "1058166784" | 200 | Bill Item & Provisional Tax details|
+|MOCK-BILL-002 | *Bill.Id*: "1411815424" | 200 | Bill Item & Provisional Tax details|
+|MOCK-BILL-003 | *Bill.Id*: "865310720" | 200 | Bill Item & Provisional Tax details|
+|MOCK-BILL-004 | *Bill.Id*: "282290176" | 200 | Bill Item & Provisional Tax details|
+|MOCK-BILL-005 | *Bill.Id*: "1804888576" | 401 | EV1022 - Unauthorised delegation.|
+|MOCK-BILL-008 | *Bill*: {"Invalid": true} | 400 | EV1100 - Incoming content contains invalid field names or field/value lengths exceeding 255 characters.|
+|MOCK-BILL-009 | *Bill*: {} | 400 | EV2000 - Mandatory field - Bill.Id  - is missing|
+|MOCK-BILL-010 | *Bill.Id*: "123" | 404 | ER5000 - No bill item found with input data|
+|MOCK-BILL-011 | *Authorization*: "Bearer invalidtoken" | 401 | EV1020 - Authentication error|
+|MOCK-BILL-012 | *Authorization*: (empty) | 401 | EV1021 - Missing OAuth in the HTTP header|
 
+### Test scenarios report template
 
-## Test environment information
----
-### Test environment URL
-| End point|  URL|
-|--|--|
-| Testing | https://test5.services.ird.govt.nz:4046/gateway/bill/|    
-| Pre-Production | https://test6.services.ird.govt.nz:4046/gateway/bill/ | 
-
->**NOTE:** These endpoints are subject to change due to environment updates in the future. 
+- [Download Test Scenarios report template](Bill%20API%20Service%20-%20Test%20Report%20Template.docx)
 
 
 ## Production environment information
