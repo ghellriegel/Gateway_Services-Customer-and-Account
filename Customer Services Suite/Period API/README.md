@@ -16,16 +16,14 @@ The Period Service API described in this build pack document provides current cu
 ## Key documentation
 
 - YAML file
-	- View and download the [Period API YAML](Period%202020-08-06.yaml)
+	- View and download the [Period API YAML](Period%202020-09-30.yaml)
 
 - Build pack 
-	- [Download the Period API build pack](Build%20pack%20-%20Period%20Service%20API.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the Period API build pack](Build%20pack%20-%20Period%20API.pdf) to view data definitions of each operation and response status code definitions
 	
 ## Environment information
 
 - [Mock environment information - emulated service, scenarios mindmap and test data](#mock-environment-information)
-
-- [Test environment information - test scenarios and report template ](#test-environment-information)
 
 - [Production environment information - URL endpoint](#production-environment-information)
 
@@ -51,7 +49,7 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 
 ### Test scenarios report template
 
-- [Download Test Scenarios report template](Period%20API-%20Test%20Report%20Template.docx)
+- [Download Test Scenarios report template](Period%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
 
 <a Period="URL-endpoints"></a>
 

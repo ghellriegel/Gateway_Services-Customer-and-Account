@@ -29,8 +29,6 @@ The Bank Service API described in this build pack document provides current cust
 ---
 - [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
 
-- [Test environment information - test scenarios report template and URL endpoints](#test-environment-information)
-
 - [Production environment information - URL endpoint](#production-environment-information)
 
 ## Supporting services
@@ -62,10 +60,11 @@ Service: Identity and access - view: [How to integrate, OAuth, JWT requests and 
 - [View larger image](../images/Bank%20API%20Mock%20Service.png)
 ![Mock Scenarios](../images/Bank%20API%20Mock%20Service.png)
 
-
 > **NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
 
+### Test scenarios report template
 
+- [Download Test Scenarios report template](Bank%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
 
 <a name="production-environment-information"></a>
 ## Production environment information

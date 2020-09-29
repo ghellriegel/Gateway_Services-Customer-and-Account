@@ -16,10 +16,10 @@ The Customer API described in this build pack document provides current customer
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Customer API YAML](Customer%202020-09-28.yaml)
+	- View and download the [Customer API YAML](Customer%202020-09-30.yaml)
 
 - Build pack 
-	- [Download the Customer API build pack](Build%20pack%20-%20Customer%20Service%20API.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the Customer API build pack](Build%20pack%20-%20Customer%20API.pdf) to view data definitions of each operation and response status code definitions
 	
 - Sample Messages
     - [Sample Messages](#Sample-Messages) to a list of successfull and errored JSON request and response messages 	
@@ -79,13 +79,9 @@ Service: Identity and access - view: [How to integrate, OAuth, JWT requests and 
 
 > **NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
 
-<a name="test-environment-information"></a>
-## Test environment information
----
-
 ### Test scenarios report template
 
-- [Download Test Scenarios report template](Customer%20API-%20Test%20Report%20Template.docx)
+- [Download Test Scenarios report template](Customer%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
 
 
 <a name="production-environment-information"></a>

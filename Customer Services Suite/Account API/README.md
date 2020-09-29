@@ -16,10 +16,10 @@ The Account Service API described in this build pack document provides current c
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Account API YAML](Account%202020-09-28.yaml)
+	- View and download the [Account API YAML](Account%202020-09-30.yaml)
 
 - Build pack 
-	- [Download the Account API build pack](Build%20pack%20-%20Account%20Service%20API.pdf) to view data definitions of each operation and response status code definitions
+	- [Download the Account API build pack](Build%20pack%20-%20Account%20API.pdf) to view data definitions of each operation and response status code definitions
 
 - API Reference	
 	- [View API Refence](#Account-API-REST-Reference)
@@ -68,7 +68,7 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 
 ### Test scenarios report template
 
-- [Download Test Scenarios report template](Account%20API-%20Test%20Report%20Template.docx)
+- [Download Test Scenarios report template](Account%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
 
 
 <a name="production-environment-information"></a>
