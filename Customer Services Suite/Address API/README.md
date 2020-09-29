@@ -28,31 +28,24 @@ The Address Service API described in this build pack document provides current c
 ---
 - [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
 
-- [Test environment information - URL endpoints](#test-environment-information)
+- [URL Endpoints and API reference ](#Address-API-REST-Reference)
 
-- [Production environment information - URL endpoint](#production-environment-information)
-
-- [URL Endpoints and API reference ](#URL-endpoints)
+- [Test environment information - Report Template](#test-environment-information)
 
 ## Supporting services
 ---- 
 
 Service: Identity and access - view: [How to integrate, OAuth & JWT requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 
-
-<a name="URL-endpoints"></a>
-### URL Endpoints and API Reference
+<a name="Address-API-REST-Reference"></a>
+## Address URL Endpoints and API Reference
 
 | Environment | Scheme Authority |  
 | --- | --- |
 | Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`|
 | Production (PROD) | `https://services.ird.govt.nz:4046`|
 
-
-<a name="Address-API-REST-Reference"></a>
-## Address API REST Reference
-
-#### Address API - `/gateway/address{Service}`
+#### Address API - `*{Scheme Authority}*/gateway/address/{Service}`
 | Service | HTTP request types | Description |  
 | -- | :--: | -- | 
 | address | `DELETE` | This web service is used to remove an address | 
@@ -66,10 +59,8 @@ Service: Identity and access - view: [How to integrate, OAuth & JWT requests and
 ## Mock environment information
 ---
 ### Mock emulated service URL
-| End point|  URL|
-|--|--|
- Landing Page | https://mock-cus.ird.digitalpartner.services
- Service Path | https://mock-cus.ird.digitalpartner.services/gateway/address/|
+
+- Landing Page https://mock-cus.ird.digitalpartner.services 
 
 ### Address mock scenarios mindmap
 
@@ -84,18 +75,9 @@ Service: Identity and access - view: [How to integrate, OAuth & JWT requests and
 - [Download Test Scenarios report template](Address%20API-%20Test%20Report%20Template.docx)
 
 
-<a name="production-environment-information"></a>
-## Production environment information
-
-### Production environment URL
-
-* URL Base Path endpoint: https://services.ird.govt.nz:4046/gateway/address/
 
 
-### URL Endpoints and API Reference
 
-| Environment | Scheme Authority |  
-| --- | --- |
-| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`|
-| Production (PROD) | `https://services.ird.govt.nz:4046`|
+
+
 
