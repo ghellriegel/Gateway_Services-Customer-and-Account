@@ -21,6 +21,9 @@ The Customer API described in this build pack document provides current customer
 - Build pack 
 	- [Download the Customer API build pack](Build%20pack%20-%20Customer%20Service%20API.pdf) to view data definitions of each operation and response status code definitions
 	
+- Sample Messages
+    - [Sample Messages](#Sample-Messages) to a list of successfull and errored JSON request and response messages 	
+	
 - API Reference	
 	- [View API Refence](#Customer-API-REST-Reference)	
 
@@ -36,6 +39,17 @@ The Customer API described in this build pack document provides current customer
 ---- 
 
 Service: Identity and access - view: [How to integrate, OAuth, JWT requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+
+<a name="Sample-Messages"></a>
+## Sample messages
+
+| Service | HTTP Status Code| Description | JSON Request | JSON Response | 
+| -- | :--: | -- | -- | -- | 
+| customer | `200` | Successfull Request | [Request](sample%20messages/POST_200_customer_request.json) | [Response](sample%20messages/POST_200_customer_response.json) | 
+| customer | `400` | Non-existent IRD number | [Request](sample%20messages/POST_400_customer_CST404_non-existent_IRD_number_request.json) | [Response](sample%20messages/POST_400_customer_CST404_non-existent_IRD_number_response.json) |
+| customer | `400` | Hyphenated IRD number | [Request](sample%20messages/POST_400_customer_EV1100_hyphenated_IRD_number_request.json) | [Response](sample%20messages/POST_400_customer_EV1100_hyphenated_IRD_number_response.json) |
+| customer | `400` | Missing CustomerIDType | [Request](sample%20messages/POST_400_customer_EV1100_missing_CustomerIDType_request.json) | [Response](sample%20messages/POST_400_customer_EV1100_missing_CustomerIDType_response.json) |
+
 
 
 <a name="Customer-API-REST-Reference"></a>
