@@ -6,7 +6,7 @@
 #### Release version 1.0 
 
 ## About the Customer Services Suite
-The 'Customer Services Suite’ is collection of APIs designed to be used together — Account, Address, Bank Account, Contact, Customer Service, Name and Period. It is 
+The 'Customer Services Suite’ is collection of APIs designed to be used together — Account, Address, Bank, Contact, Customer, Name and Period. It is 
 important to understand the dependencies between these when deciding which ones to implement, how to correctly sequence their adoption, how authorisation rules 
 impact access, and how to use them in general. 
 
@@ -15,32 +15,32 @@ Larger View [Customer APIs](images/customer%20DM3.png)
 
 
 ### [Account API](Account%20API) _(Read-only)_
-This API will be used by approved organisations to retrieve account information from Inland Revenue.
+The Account API is used by the consumer to retrieve information about a specific account. This includes information that is unique to certain account types and may not always be present in a response. 
 
 ### [Address API](Address%20API)
-The Address API provides current information about the addresses held by Inland Revenue.
+The Address API provides the fuctionality to create, update and delete addresses for a given customer or account.
 
-### [Bank Account API](Bank%20API) 
-The Bank Account API is used to update the bank account number as held by Inland Revenue.
+### [Bank API](Bank%20API) 
+The Bank API is used to create and delete bank account information for a given account.
 
 ### [Contact API](Contact%20API) 
-The Contact API provides current information about the addresses held by Inland Revenue.
+The Contact API is used to create, update and delete contact and phone information for a given customer.
 
 ### [Customer API](Customer%20API) _(Read-only)_
 The Customer API provides current customer information as held by Inland Revenue. 
 
 ### [Name API](Name%20API)
-The Name API provides current customer information as held by Inland Revenue. 
+The Name API is used to create, update and delete customer name as held by Inland Revenue. 
 
 ### [Period API](Period%20API) _(Read-only)_
-The Period API provides current customer information as held by Inland Revenue. 
+The Period API provides current period information as held by Inland Revenue. 
 
-
+---
 
 
 ## Customer Services Suite REST API reference
 
-You'll need to use different APIs depending on the service that your app provides. Use the following tables to see which APIs are useful for different kinds of tasks.
+You'll need to use different APIs depending on the service that your app provides. Use the following tables to see which APIs are useful for different kinds of operations.
 
 #### Account API - `/gateway/account/{Service}`
 | Service | HTTP request types | Description | 
@@ -105,4 +105,4 @@ You'll need to use different APIs depending on the service that your app provide
 #### Common across all APis - `/gateway/{api}/status`
 | Service | Method | Description | 
 | :--: | :--: | -- |
-| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration | 
+| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 
