@@ -37,13 +37,6 @@ The Bank Service API described in this build pack document provides current cust
 Service: Identity and access - view: [How to integrate, OAuth, JWT requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 
 
-
-<a name="Bank-API-REST-Reference"></a>
-## Bank API REST Reference
-
-#### Bank API - `/gateway/bank/{Service}`
-
-
 > *NOTE:* The `status` service is not available in the mock environemnts. 
 
 <a name="mock-environment-information"></a>
@@ -52,8 +45,8 @@ Service: Identity and access - view: [How to integrate, OAuth, JWT requests and 
 ### Mock emulated service URL
 | End point|  URL|
 |--|--|
- Landing Page | https://mock-cus.ird.digitalpartner.services
- Service Path | https://mock-cus.ird.digitalpartner.services/gateway/Bank/|
+| Landing Page | https://mock-cus.ird.digitalpartner.services |
+| Service Path | https://mock-cus.ird.digitalpartner.services/gateway/bank/|
 
 ### Bank mock scenarios mindmap
 
@@ -73,12 +66,3 @@ Service: Identity and access - view: [How to integrate, OAuth, JWT requests and 
 
 * URL Base Path endpoint: https://services.ird.govt.nz:4046/gateway/bank/
 
-
-<a name="URL-endpoints"></a>
-### URL Endpoints and API Reference
-
-| Service | HTTP request types | Description | 
-| -- | :--: | -- | 
-|  bank |  `DELETE` | This web service is used to remove a bank account from an account  |
-|  bank |  `POST` | This web service is used to add a bank account to an account  |
-| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration |
