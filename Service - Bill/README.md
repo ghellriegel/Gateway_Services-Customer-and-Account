@@ -14,7 +14,7 @@
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Bill API YAML](Bill%20API%202020-05-25.yaml)
+	- View and download the [Bill API YAML](Bill%202020-09-30.yaml)
 
 - Build pack
 	- [Download the Bill API build pack](Build%20pack%20-%20Bill%20API.pdf) to view data definitions of each operation and response status code definitions
@@ -50,7 +50,7 @@
 |Description | URL|
 |---|---|
 | Landing Page | https://mock-bil.ird.digitalpartner.services|
-| Service Path | https://mock-bil.ird.digitalpartner.services/secure/gateway/bill/bill|
+| Service Path | https://mock-bil.ird.digitalpartner.services/secure/gateway/bill/|
  
 ### Mock environment authentication
    * Consumers of this mock service must be authenticated.
