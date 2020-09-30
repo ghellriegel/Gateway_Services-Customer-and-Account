@@ -1,0 +1,108 @@
+{
+    "Customer": {
+        "ID": "069096409",
+        "IDType": "IRD",
+        "NZBN": "9429035383472",
+        "EntityType": "COMPNY",
+        "EntitySubType": "CC",
+        "Commence": "2000-01-01",
+        "Cease": "9999-12-31",
+        "BIC": [
+            {
+                "BICCode": "A041930"
+            }
+        ],
+        "Indicator": [
+            {
+                "Indicator": "LOOKTH"
+            }
+        ],
+        "Address": [
+            {
+                "AddressID": 1004723453056,
+                "Type": "LOC",
+                "Street": "32 ELM CRESCENT",
+                "Street2": "",
+                "Unit": "",
+                "UnitType": "",
+                "City": "INVERCARGILL",
+                "State": "",
+                "PostCode": "9810",
+                "Country": "NZ",
+                "Attention": "",
+                "Urbanisation": "GLADSTONE",
+                "District": "",
+                "SubDistrict": "",
+                "SubProvince": "",
+                "Formatted": "32 ELM CRESCENT GLADSTONE INVERCARGILL 9810",
+                "Updated": "2020-07-02T15:49:03"
+            },
+            {
+                "AddressID": 1004722686772,
+                "Type": "MAL",
+                "Street": "34 JOHN F KENNEDY DRIVE",
+                "Street2": "",
+                "Unit": "",
+                "UnitType": "",
+                "City": "PALMERSTON NORTH",
+                "State": "",
+                "PostCode": "4414",
+                "Country": "NZ",
+                "Attention": "",
+                "Urbanisation": "MILSON",
+                "District": "",
+                "SubDistrict": "",
+                "SubProvince": "",
+                "Formatted": "34 JOHN F KENNEDY DRIVE MILSON PALMERSTON NORTH 4414",
+                "Updated": "2020-05-21T18:02:52"
+            }
+        ],
+        "Name": [
+            {
+                "NameID": 1004723443833,
+                "Type": "LGL",
+                "LastName": "",
+                "FirstName": "",
+                "MiddleName": "",
+                "Title": "",
+                "Suffix": "",
+                "Formatted": "LOOK THROUGH COMPANY LTD.",
+                "Updated": "2020-07-02T15:49:03"
+            }
+        ],
+        "Contact": [
+            {
+                "ContactID": 1295148032,
+                "ContactType": "PRIMRY",
+                "Name": "Louie Wagner",
+                "Updated": "2020-07-06T14:53:36",
+                "Phone": [
+                    {
+                        "PhoneID": 9004732142020,
+                        "PhoneType": "CELL",
+                        "Country": "NZ",
+                        "AreaCode": "",
+                        "PhoneNumber": "0276479952",
+                        "Extension": ""
+                    }
+                ]
+            },
+            {
+                "ContactID": 1578864256,
+                "ContactType": "SCNDRY",
+                "Name": "Peter Parker",
+                "Updated": "2020-07-08T10:30:24",
+                "Phone": [
+                    {
+                        "PhoneID": 1004734460042,
+                        "PhoneType": "BSN",
+                        "Country": "NZ",
+                        "AreaCode": "",
+                        "PhoneNumber": "048997445",
+                        "Extension": "04"
+                    }
+                ]
+            }
+        ]
+    }
+}
