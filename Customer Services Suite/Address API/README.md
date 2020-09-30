@@ -68,11 +68,9 @@ Service: Identity and access - view: [How to integrate, OAuth & JWT requests and
 ![Mock Scenarios](../images/Address%20API%20Mock%20Service.png)
 
 <a name="test-environment-information"></a>
-## Test environment information
-
 ### Test scenarios report template
 
-- [Download Test Scenarios report template](Address%20API-%20Test%20Report%20Template.docx)
+- [Download Test Scenarios report template](Address%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
 
 
 
