@@ -10,8 +10,8 @@ The 'Customer Services Suite’ is collection of APIs designed to be used togeth
 important to understand the dependencies between these when deciding which ones to implement, how to correctly sequence their adoption, how authorisation rules 
 impact access, and how to use them in general. 
 
-![Customer APIs](images/customer%20DM2.png)
-Lager View [Customer APIs](images/customer%20DM3.png)
+![Customer APIs](images/customer%20DM3.png)
+Larger View [Customer APIs](images/customer%20DM3.png)
 
 
 ### [Account API](Account%20API) _(Read-only)_
