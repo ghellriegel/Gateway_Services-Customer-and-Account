@@ -6,12 +6,11 @@
 
 #### Release version 1.0  
 
-## About the Contact API service
+## About the Contact API 
 
-Inland Revenue has a suite of digital services available for consumption by our service providers that supports efficient, electronic business interactions with Inland Revenue. 
-The Contact Service API described in this build pack document provides current customer information as held by Inland Revenue. 
+The contact API enables the creating, updating, and deleting of the contact details of a customer or an account. It is one of seven APIs that together make up the customer services suite. 
 
->**NOTE:** The Contact API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
+>**NOTE:** The Contact API is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
 * View and download the [Contact API YAML](Contact%202020-09-28.yaml)

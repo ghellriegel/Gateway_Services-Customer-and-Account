@@ -4,16 +4,16 @@
 
 # Name API 
 
-#### Release version 1.0 - Coming Soon. 
+#### Release version 1.0 
 
-## About the Name API service
+## About the Name API
 
-Inland Revenue has a suite of digital services available for consumption by our service providers that supports efficient, electronic business interactions with Inland Revenue. 
-The Name Service API described in this build pack document provides current customer information as held by Inland Revenue. 
+The name API enables the creating, updating, and deleting of the customer’s names. It is one of seven APIs that together make up the customer services suite. 
 
->**NOTE:** The Name API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
+>**NOTE:** The Name API is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
+
 * View and download the [Name API YAML](Name%202020-09-30.yaml)
 * [Download the Name API build pack](Build%20pack%20-%20Name%20API.pdf) to view data definitions of each operation and response status code definitions
 * [View API Reference and URL Endpoints](#Name-API-REST-Reference)	

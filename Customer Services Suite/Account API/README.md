@@ -5,12 +5,11 @@
 
 #### Release version 1.0
 
-## About the Account API service
+## About the Account API 
 
-Inland Revenue has a suite of digital services available for consumption by our service providers that supports efficient, electronic business interactions with Inland Revenue. 
-The Account Service API described in this build pack document provides current customer information as held by Inland Revenue. 
+The account API provides either a list of accounts for an identified customer or information about a single customer account. It is one of seven APIs that together make up the customer services suite. An account represents a tax type (for example income tax) or a product (for example KiwiSaver). 
 
->**NOTE:** The Account API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
+>**NOTE:** The Account API is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
 

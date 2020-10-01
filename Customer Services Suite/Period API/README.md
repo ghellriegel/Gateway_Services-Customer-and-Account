@@ -6,12 +6,11 @@
 
 #### Release version 1.0
 
-## About the Period API service
+## About the Period API
 
-Inland Revenue has a suite of digital services available for consumption by our service providers that supports efficient, electronic business interactions with Inland Revenue. 
-The Period Service API described in this build pack document provides current customer information as held by Inland Revenue. 
+The period API provides information about one or more periods for an identified customer account. It is one of seven APIs that together make up the customer services suite. 
 
->**NOTE:** The Period API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
+>**NOTE:** The Period API is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
 
@@ -21,7 +20,7 @@ The Period Service API described in this build pack document provides current cu
 ## Environment information
 
 * [Mock environment information - emulated service, scenarios mindmap and test data](#mock-environment-information)
-* [URL Endpoints and API reference](#URL-endpoints)
+* [View API Reference and URL endpoints](#Period-API-REST-Reference)	
 
 ## Supporting services
 
@@ -29,6 +28,7 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 
 ---
 
+<a name="Period-API-REST-Reference"></a>
 ### URL Endpoints and API Reference
 
 | Environment | Scheme Authority | mutual TLS |
@@ -44,6 +44,7 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 
 
 > The `status` service might not available in the mock environemnts. 
+
 
 
 <a Period="mock-environment-information"></a>

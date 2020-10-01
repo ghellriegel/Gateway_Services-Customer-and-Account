@@ -6,12 +6,11 @@
 
 #### Release version 1.0
 
-## About the Bank API service
+## About the Bank API 
 
-Inland Revenue has a suite of digital services available for consumption by our service providers that supports efficient, electronic business interactions with Inland Revenue. 
-The Bank Service API described in this build pack document provides current customer information as held by Inland Revenue. 
+The bank account API enables the creating and deleting of the refund bank account for an identified customer’s account. It is one of seven APIs that together make up the customer services suite.
 
->**NOTE:** The Bank API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
+>**NOTE:** The Bank API is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
 * View and download the [Bank API YAML](Bank%202020-09-28.yaml)
@@ -19,10 +18,10 @@ The Bank Service API described in this build pack document provides current cust
 * [View API Reference and URL endpoints](#Bank-API-REST-Reference)	
 
 ## Environment information
-- [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
+* [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
 
 ## Supporting services
-Service: Identity and access - view: [How to integrate, M2M JWT, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* Service: Identity and access - view: [How to integrate, M2M JWT, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 
 <a name="Contact-API-REST-Reference"></a>
 ## Bank API REST Reference and URL endpoints

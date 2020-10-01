@@ -6,12 +6,11 @@
 
 #### Release version 1.0
 
-## About the Address API service
+## About the Address API 
 
-Inland Revenue has a suite of digital services available for consumption by our service providers that supports efficient, electronic business interactions with Inland Revenue. 
-The Address Service API described in this build pack document provides current customer information as held by Inland Revenue. 
+The address API enables the creating, updating, and deleting of the address of a customer or an account. It is one of seven APIs that together make up the customer services suite.
 
->**NOTE:** The Address API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
+>**NOTE:** The Address API is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
 ---
