@@ -4,72 +4,83 @@
 
 # Contact API 
 
-#### Release version 1.0 - Coming Soon. 
+#### Release version 1.0  
 
-## About the Contact API service
+## About the Contact API 
 
-Inland Revenue has a suite of digital services available for consumption by our service providers that supports efficient, electronic business interactions with Inland Revenue. 
-The Contact Service API described in this build pack document provides current customer information as held by Inland Revenue. 
+The contact API enables the creating, updating, and deleting of the contact details of a customer or an account. It is one of seven APIs that together make up the customer services suite. 
 
->**NOTE:** The Contact API Service is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
+>**NOTE:** The Contact API is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
----
-- YAML file
-	- View and download the [Contact API YAML](Contact%202020-09-28.yaml)
-
-- Build pack 
-	- [Download the Contact API build pack](Build%20pack%20-%20Contact%20API.pdf) to view data definitions of each operation and response status code definitions
-	
-- API Reference	
-	- [View API Refence](#Contact-API-REST-Reference)	
+* View and download the [Contact API YAML](Contact%202020-09-28.yaml)
+* [Download the Contact API build pack](Build%20pack%20-%20Contact%20API.pdf) to view data definitions of each operation and response status code definitions
+* [Contact API Reference and URL endpoints](#Contact-API-REST-Reference)	
 
 ## Environment information
----
 - [Mock environment information - emulated service URL, scenarios mindmap](#mock-environment-information)
 
-- [Production environment information - URL endpoint](#production-environment-information)
-
 ## Supporting services
----- 
-
-Service: Identity and access - view: [How to integrate, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* Service: Identity and access - view: [How to integrate, M2M JWT & OAuth message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* [Customer API](../Customer%20API)
+* [Account API](../Account%20API)
 
 <a name="Contact-API-REST-Reference"></a>
 ## Contact API REST Reference
 
-|Service| Verb Action| Description
-| -- | :--: | -- |
-| Contact | `POST` | This web service is used to get information about an Contact|
-| list | `POST` | This web service is used to get a list of Contacts for a customer ID |
-| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration |
+| Environment | Scheme Authority | Mutual TLS (mTLS) authentication |
+| --- | --- | :---: |
+| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`| no |
+| Production (PROD) | `https://services.ird.govt.nz:4046`| yes |
 
-> The `status` service is not available in the mock environemnts. 
+#### Contact API - `{Scheme Authority}/gateway/contact/{Service}`
+| Service | HTTP request types | Description | 
+| :--: | :--: | -- |
+| contact | `POST` | Adds a contact to the identified customer<br/>or<br/>Adds a contact to the identified account | 
+| contact | `PUT` | Updates the name of an identified contact - this can be either a customer contact or an account contact | 
+| contact | `DELETE` | This web service is used to delete a contact | 
+| phone | `POST` | Adds a phone number to the contact details of an identified customer<br/>or<br/>Adds a phone number to the contact details of an identified account | 
+| phone | `PUT` | Updates the phone number of an identified contact - this can be either a customer contact phone number or an account contact phone number | 
+| phone | `DELETE` | Deletes the phone number of an identified contact - this can be either a customer contact phone number or an account contact phone number | 
+| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 
+
+> The `status` service might not be available in the mock environment.
 
 <a name="mock-environment-information"></a>
 ## Mock environment information
 ---
+
 ### Mock emulated service URL
-| End point | URL |
-|--|--|
-| Landing Page | https://mock-cus.ird.digitalpartner.services |
-| Service Path | https://mock-cus.ird.digitalpartner.services/gateway/contact/|
+* Landing Page https://mock-cus.ird.digitalpartner.services 
 
 ### Contact mock scenarios mindmap
 
-- [View larger image](../images/Contact%20API%20Emulator%20Mindmap.png)
-![Mock Scenarios](../images/Contact%20API%20Emulator%20Mindmap.png)
+[View larger image](../images/Contact%20API%20Emulator%20Mindmap.png)
+![Mock Scenarios](../images/Contact%20API%20Emulator%20Mindmap.png) - *Coming Soon*
 
-> **NOTE:** The emulated service is not managing authentication. Access delegation/restriction is not emulated and any user has access to the test data.
+### Mock environment authentication
+   * Consumers of this mock service must be authenticated.
+   * Access delegation/restriction is not emulated, and any authenticated user has access to the test data.
+   * Authentication is provided using one of two methods:
+     1. OAuth
+        * OAuth token issued by the mock OAuth service. Any valid token issued by the mock OAuth service can be used to access this service.
+        * Please consult the [mock OAuth service documentation](https://mock-oauth.ird.digitalpartner.services/) for further details about the authentication process.
+        * The OAuth token should be provided in the 'Authorization' request header as follows:
+        ```
+        Authorization: Bearer {OAuthAccessToken}
+        ```
+     2. JWT
+        * Alternatively a self-issued JWT may be used to access the service.
+        * Please consult the build pack for information on the token structure.
+        * The mock service does not validate the following JWT attributes:
+            * "sub" field
+            * "iss" field
+            * token signature
+        * The JWT should be provided in the 'Authorization' request header as follows (note the 'Bearer' prefix is omitted):
+        ```
+        Authorization: {JWT}
+        ```
 
 ### Test scenarios report template
 
-- [Download Test Scenarios report template](Contact%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
-
-
-<a name="production-environment-information"></a>
-## Production environment information
----
-### Production environment URL
-
-* URL Base Path endpoint: https://services.ird.govt.nz:4046/gateway/contact/
+* [Download Test Scenarios report template](Contact%20API-%20Test%20Report%20Template.docx) - *Coming Soon*

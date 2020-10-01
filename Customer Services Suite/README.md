@@ -6,7 +6,7 @@
 #### Release version 1.0 
 
 ## About the Customer Services Suite
-The 'Customer Services Suite’ is collection of APIs designed to be used together — Account, Address, Bank Account, Contact, Customer Service, Name and Period. It is 
+The 'Customer Services Suite’ is collection of APIs designed to be used together — Account, Address, Bank, Contact, Customer, Name and Period. It is 
 important to understand the dependencies between these when deciding which ones to implement, how to correctly sequence their adoption, how authorisation rules 
 impact access, and how to use them in general. 
 
@@ -15,94 +15,94 @@ Larger View [Customer APIs](images/customer%20DM3.png)
 
 
 ### [Account API](Account%20API) _(Read-only)_
-This API will be used by approved organisations to retrieve account information from Inland Revenue.
+Account API provides general information about an identified customer’s accounts.
 
 ### [Address API](Address%20API)
-The Address API provides current information about the addresses held by Inland Revenue.
+Address API updates customer and account addresses.
 
-### [Bank Account API](Bank%20API) 
-The Bank Account API is used to update the bank account number as held by Inland Revenue.
+### [Bank API](Bank%20API) 
+Bank Account API updates refund bank account information of an identified customer’s account.
 
 ### [Contact API](Contact%20API) 
-The Contact API provides current information about the addresses held by Inland Revenue.
+Contact API updates customer and account contacts.
 
 ### [Customer API](Customer%20API) _(Read-only)_
-The Customer API provides current customer information as held by Inland Revenue. 
+Customer API provides general information about a customer. 
 
 ### [Name API](Name%20API)
-The Name API provides current customer information as held by Inland Revenue. 
+Name API updates customer names.
 
 ### [Period API](Period%20API) _(Read-only)_
-The Period API provides current customer information as held by Inland Revenue. 
+Period API provides information about periods for an identified customer’s account. 
 
-
+---
 
 
 ## Customer Services Suite REST API reference
 
-You'll need to use different APIs depending on the service that your app provides. Use the following tables to see which APIs are useful for different kinds of tasks.
+You'll need to use different APIs depending on the service that your app provides. Use the following tables to see which APIs are useful for different kinds of operations.
 
 #### Account API - `/gateway/account/{Service}`
 | Service | HTTP request types | Description | 
 | :--: | :--: | -- |
-| account | `POST` | This web service is used to get information about an Account | 
-| list | `POST` | This web service is used to get a list of accounts for a customer ID | 
+| account | `POST` | Returns the information of an identified customer account | 
+| list | `POST` | Returns a list of accounts for an identified customer | 
 
 ---
 
-#### Address API - `/gateway/address{Service}`
+#### Address API - `/gateway/address/{Service}`
 | Service | HTTP request types | Description |
 | -- | :--: | -- | 
-| address | `DELETE` | This web service is used to remove an address | 
-| address | `PUT` | This web service is used to update an address | 
-| address | `POST` | This web service is used to add an address | 
+| address | `DELETE` | Deletes the details of the identified address - this can be either a customer address or an account address | 
+| address | `PUT` | Updates the provided details to the identified address - this can be either a customer address or an account address | 
+| address | `POST` | Adds an address of a given type (physical/postal) to the identified customer<br/>or<br/>Adds an address of a given type (physical/postal) to the identified account | 
 
 ---
 
-#### Bank API - `/gateway/bank{Service}`
+#### Bank API - `/gateway/bank/{Service}`
 | Service | HTTP request types | Description | 
 | -- | :--: | -- | 
-| bank |  `DELETE` | This web service is used to remove a bank account from an account  |
-| bank |  `POST` | This web service is used to add a bank account to an account  |
+| bank |  `DELETE` | Deletes the refund bank account from the identified customer account |
+| bank |  `POST` | Adds a refund bank account to the identified customer account if there is not already a refund bank account on the customer account<br/>Or<br/>Replaces an existing refund bank account on the identified customer account  |
 
 ---
 
 #### Contact API - `/gateway/contact/{Service}`
 | Service | HTTP request types | Description | 
 | :--: | :--: | -- |
-| contact | `POST` | This web service is used to add a contact | 
-| contact | `PUT` | This web service is used to update a contact | 
+| contact | `POST` | Adds a contact to the identified customer<br/>or<br/>Adds a contact to the identified account | 
+| contact | `PUT` | Updates the name of an identified contact - this can be either a customer contact or an account contact | 
 | contact | `DELETE` | This web service is used to delete a contact | 
-| phone | `POST` | This web service is used to add a phone number to an existing contact | 
-| phone | `PUT` | This web service is used to update a phone number on an existing contact | 
-| phone | `DELETE` | This web service is used to update a phone number on an existing contact | 
+| phone | `POST` | Adds a phone number to the contact details of an identified customer<br/>or<br/>Adds a phone number to the contact details of an identified account | 
+| phone | `PUT` | Updates the phone number of an identified contact - this can be either a customer contact phone number or an account contact phone number | 
+| phone | `DELETE` | Deletes the phone number of an identified contact - this can be either a customer contact phone number or an account contact phone number | 
 
 ---
 
 #### Customer API - `/gateway/customer/{Service}`
 | Service | HTTP request types | Description | 
 | :--: | :--: | -- |
-| customer | `POST` | This web service is used to get information about a Customer |
+| customer | `POST` | Returns the information of an identified customer |
 
 ---
 
 #### Name API - `/gateway/name/{Service}`
 | Service | HTTP request types | Description | 
 | :--: | :--: | -- |
-| name | `POST` | This web service creates names in START |
-| name | `PUT` | This web service updates names in START |
-| name | `DELETE` | This web service deletes names in START |
+| name | `POST` | Adds a name of a given type (preferred/trading) to the customer data set |
+| name | `PUT` | Updates the details of an existing name in the customer data set |
+| name | `DELETE` | Deletes a given name from the customer data set |
 
 ---
 
 #### Period API - `/gateway/period/{Service}`
-| Service | Method | Description | 
+| Service | HTTP request types | Description | 
 | :--: | :--: | -- |
-| list | `POST` | This web service is used to get a list of period for a given Account ID.| 
+| list | `POST` | Returns the information of periods for an identified customer account | 
 
 ---
 
 #### Common across all APis - `/gateway/{api}/status`
-| Service | Method | Description | 
+| Service | HTTP request types | Description | 
 | :--: | :--: | -- |
-| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should validate the service and credential configuration | 
+| status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 

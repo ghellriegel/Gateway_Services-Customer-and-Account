@@ -10,7 +10,7 @@ Use this repository to access software development kits (SDKs) for customer and 
 This service is an application programming interface (API) that external applications can call in real-time to retrieve information for a particular customer bill item. The response also includes provisional tax method details and history associated to the account to which the bill item belongs
 
 ### [Customer Services Suite](./Customer%20Services%20Suite)
-The 'Customer Services Suite' is collection of APIs designed to be used together - Account, Address, Bank Account, Contact, Customer Service, Name and Period.
+The 'Customer Services Suite' is collection of APIs designed to be used together - Account, Address, Bank Account, Contact, Customer, Name and Period.
 
 ### [Income Service](./Service%20-%20Income)
 The income service is an API that enables digital service providers to retrieve a customer's income profile data reported to Inland Revenue.
