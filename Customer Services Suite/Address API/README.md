@@ -75,7 +75,7 @@ The address API enables the creating, updating, and deleting of the address of a
 	```
  2. JWT
 	* Alternatively a self-issued JWT may be used to access the service.
-	* Please consult the [Document service build pack](Build%20pack%20-%20Document%20Service.pdf) for information on the token structure.
+	* Please consult the build pack for information on the token structure.
 	* The mock service does not validate the following JWT attributes:
 		* "sub" field
 		* "iss" field
