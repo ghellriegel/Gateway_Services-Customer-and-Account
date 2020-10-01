@@ -24,7 +24,8 @@ The period API provides information about one or more periods for an identified 
 
 ## Supporting services
 
-Service: Identity and access - view: [How to integrate, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* Identity and access - view: [How to integrate, M2M JWT, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* [Account API](../Account%20API)
 
 ---
 

@@ -24,6 +24,7 @@ The name API enables the creating, updating, and deleting of the customer’s na
 
 ## Supporting services
 * Service: Identity and access - view: [How to integrate, M2M JWT, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* [Customer API](../Customer%20API)
 
 <a name="Name-API-REST-Reference"></a>
 ## Name API REST Reference

@@ -22,6 +22,7 @@ The bank account API enables the creating and deleting of the refund bank accoun
 
 ## Supporting services
 * Service: Identity and access - view: [How to integrate, M2M JWT, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* [Account API](../Account%20API)
 
 <a name="Contact-API-REST-Reference"></a>
 ## Bank API REST Reference and URL endpoints

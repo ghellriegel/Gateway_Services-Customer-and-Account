@@ -22,6 +22,8 @@ The contact API enables the creating, updating, and deleting of the contact deta
 
 ## Supporting services
 * Service: Identity and access - view: [How to integrate, M2M JWT & OAuth message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* [Customer API](../Customer%20API)
+* [Account API](../Account%20API)
 
 <a name="Contact-API-REST-Reference"></a>
 ## Contact API REST Reference

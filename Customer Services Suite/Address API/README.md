@@ -29,7 +29,9 @@ The address API enables the creating, updating, and deleting of the address of a
 
 ## Supporting services
 ---- 
-Service: Identity and access - view: [How to integrate, OAuth & JWT requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* Service: Identity and access - view: [How to integrate, OAuth & JWT requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* [Customer API](../Customer%20API)
+* [Account API](../Account%20API)
 
 <a name="Address-API-REST-Reference"></a>
 ## Address URL Endpoints and API Reference
