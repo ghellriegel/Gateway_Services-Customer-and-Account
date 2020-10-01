@@ -71,7 +71,7 @@ The contact API enables the creating, updating, and deleting of the contact deta
         ```
      2. JWT
         * Alternatively a self-issued JWT may be used to access the service.
-        * Please consult the build pac for information on the token structure.
+        * Please consult the build pack for information on the token structure.
         * The mock service does not validate the following JWT attributes:
             * "sub" field
             * "iss" field

@@ -49,7 +49,7 @@ The address API enables the creating, updating, and deleting of the address of a
 | address | `POST` | Adds an address of a given type (physical/postal) to the identified customer or Adds an address of a given type (physical/postal) to the identified account | 
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 
 
-> The `status` service might not be available in the mock environemnt. 
+> The `status` service might not be available in the mock environment. 
 
 <a name="mock-environment-information"></a>
 ## Mock environment information

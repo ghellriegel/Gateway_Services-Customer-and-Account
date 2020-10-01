@@ -44,7 +44,7 @@ The account API provides either a list of accounts for an identified customer or
 | list | `POST` | Returns a list of accounts for an identified customer | 
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 
 
-> The `status` service might not be available in the mock environemnt. 
+> The `status` service might not be available in the mock environment. 
 
 <a name="mock-environment-information"></a>
 ## Mock environment information
