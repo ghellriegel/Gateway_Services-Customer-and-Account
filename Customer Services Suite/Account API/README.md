@@ -13,19 +13,17 @@ The account API provides either a list of accounts for an identified customer or
 
 ## Key documentation
 
-- View and download the [Account API YAML](Account%202020-09-30.yaml)
-
-- [Download the Account API build pack](Build%20pack%20-%20Account%20API.pdf) to view data definitions of each operation and response status code definitions
-
-- [View API Reference and URL endpoints](#Account-API-REST-Reference)
+* View and download the [Account API YAML](Account%202020-09-30.yaml)
+* [Download the Account API build pack](Build%20pack%20-%20Account%20API.pdf) to view data definitions of each operation and response status code definitions
+* [View API Reference and URL endpoints](#Account-API-REST-Reference)
 
 ## Environment information
 
-- [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
+* [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
 
 ## Supporting services
 
-* Service: Identity and access - view: [How to integrate, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* Service: Identity and access - view: [How to integrate, M2M JWT, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 
 ---
 
