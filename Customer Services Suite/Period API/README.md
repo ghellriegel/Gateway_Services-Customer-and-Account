@@ -54,8 +54,31 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 
 ### Period mock scenarios mindmap
 
-[View larger image](../images/Period%20API%20Mock%20Service.jpg)
-![Mock Scenarios](../images/Period%20API%20Mock%20Service.jpg)
+[View larger image](../images/Period%20API%20Mock%20Service.png)
+![Mock Scenarios](../images/Period%20API%20Mock%20Service.png)
+
+### Mock environment authentication
+* Consumers of this mock service must be authenticated.
+* Access delegation/restriction is not emulated, and any authenticated user has access to the test data.
+* Authentication is provided using one of two methods:
+ 1. OAuth
+	* OAuth token issued by the mock OAuth service. Any valid token issued by the mock OAuth service can be used to access this service.
+	* Please consult the [mock OAuth service documentation](https://mock-oauth.ird.digitalpartner.services/) for further details about the authentication process.
+	* The OAuth token should be provided in the 'Authorization' request header as follows:
+	```
+	Authorization: Bearer {OAuthAccessToken}
+	```
+ 2. JWT
+	* Alternatively a self-issued JWT may be used to access the service.
+	* Please consult the build pac for information on the token structure.
+	* The mock service does not validate the following JWT attributes:
+		* "sub" field
+		* "iss" field
+		* token signature
+	* The JWT should be provided in the 'Authorization' request header as follows (note the 'Bearer' prefix is omitted):
+	```
+	Authorization: {JWT}
+	```
 
 ### Test scenarios report template
 

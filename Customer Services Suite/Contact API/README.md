@@ -55,7 +55,7 @@ The Contact Service API described in this build pack document provides current c
 ### Contact mock scenarios mindmap
 
 [View larger image](../images/Contact%20API%20Emulator%20Mindmap.png)
-![Mock Scenarios](../images/Contact%20API%20Emulator%20Mindmap.png)
+![Mock Scenarios](../images/Contact%20API%20Emulator%20Mindmap.png) - *Coming Soon*
 
 ### Mock environment authentication
    * Consumers of this mock service must be authenticated.
@@ -80,8 +80,6 @@ The Contact Service API described in this build pack document provides current c
         Authorization: {JWT}
         ```
 
-
-
 ### Test scenarios report template
 
-- [Download Test Scenarios report template](Contact%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
+* [Download Test Scenarios report template](Contact%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
