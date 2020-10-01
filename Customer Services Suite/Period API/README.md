@@ -43,7 +43,7 @@ Service: Identity and access - view: [How to integrate, OAuth requests and respo
 | list | `POST` | Returns the information of periods for an identified customer account | 
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 
 
-> The `status` service might not available in the mock environemnts. 
+> The `status` service might not be available in the mock environemnt. 
 
 
 

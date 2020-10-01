@@ -41,7 +41,7 @@ The name API enables the creating, updating, and deleting of the customer’s na
 | name | `DELETE` | Deletes a given name from the customer data set |
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 
 
-> The `status` service is not available in the mock environemnts. 
+> The `status` service might not be available in the mock environemnt.
 
 ---
 
