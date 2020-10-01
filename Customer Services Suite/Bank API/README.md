@@ -39,7 +39,7 @@ The bank account API enables the creating and deleting of the refund bank accoun
 | bank |  `POST` | Adds a refund bank account to the identified customer account if there is not already a refund bank account on the customer account<br/>Or<br/>Replaces an existing refund bank account on the identified customer account  |
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 
 
-> The `status` service might not be available in the mock environemnt.
+> The `status` service might not be available in the mock environment.
 
 <a name="mock-environment-information"></a>
 ## Mock environment information

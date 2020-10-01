@@ -44,7 +44,7 @@ The contact API enables the creating, updating, and deleting of the contact deta
 | phone | `DELETE` | Deletes the phone number of an identified contact - this can be either a customer contact phone number or an account contact phone number | 
 | status | `GET` | This web service sends a 200 HTTP response with a message body of "OK". This is preferred over service "ping" functionality as this should *only* be used to validate the service and credential configuration | 
 
-> The `status` service might not be available in the mock environemnt.
+> The `status` service might not be available in the mock environment.
 
 <a name="mock-environment-information"></a>
 ## Mock environment information
