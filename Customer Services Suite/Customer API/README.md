@@ -16,7 +16,7 @@ The customer API provides general information about a customer. It is one of sev
 
 * View and download the [Customer API YAML](Customer%202020-09-30.yaml)
 * [Download the Customer API build pack](Build%20pack%20-%20Customer%20API.pdf) to view data definitions of each operation and response status code definitions
-* [Sample Messages](#Sample-Messages) to a list of successfull and errored JSON request and response messages 	
+* [Sample Messages](#Sample-Messages) to a list of successful and errored JSON request and response messages 	
 * [View API Reference and URL endpoints](#Customer-API-REST-Reference)	
 
 ## Environment information
@@ -27,12 +27,15 @@ The customer API provides general information about a customer. It is one of sev
 
 * Service: Identity and access - view: [How to integrate, OAuth, JWT requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 
+---
+
+
 <a name="Sample-Messages"></a>
 ## Sample messages
 
 | Service | HTTP Status Code| Description | JSON Request | JSON Response | 
 | -- | :--: | -- | -- | -- | 
-| customer | `200` | Successfull Request | [Request](sample%20messages/POST_200_customer_request.json) | [Response](sample%20messages/POST_200_customer_response.json) | 
+| customer | `200` | Successful Request | [Request](sample%20messages/POST_200_customer_request.json) | [Response](sample%20messages/POST_200_customer_response.json) | 
 | customer | `400` | Non-existent IRD number | [Request](sample%20messages/POST_400_customer_CST404_non-existent_IRD_number_request.json) | [Response](sample%20messages/POST_400_customer_CST404_non-existent_IRD_number_response.json) |
 | customer | `400` | Hyphenated IRD number | [Request](sample%20messages/POST_400_customer_EV1100_hyphenated_IRD_number_request.json) | [Response](sample%20messages/POST_400_customer_EV1100_hyphenated_IRD_number_response.json) |
 | customer | `400` | Missing Customer ID Type | [Request](sample%20messages/POST_400_customer_EV1100_missing_CustomerIDType_request.json) | [Response](sample%20messages/POST_400_customer_EV1100_missing_CustomerIDType_response.json) |
