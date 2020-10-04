@@ -13,25 +13,38 @@ The address API enables the creating, updating, and deleting of the address of a
 >**NOTE:** The Address API is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
----
 
-- View and download the [Address API YAML](Address%202020-09-28.yaml)
 
-- [Download the Address API build pack](Build%20pack%20-%20Address%20API.pdf) to view data definitions of each operation and response status code definitions
-
+* View and download the [Address API YAML](Address%202020-09-28.yaml)
+* [Download the Address API build pack](Build%20pack%20-%20Address%20API.pdf) to view data definitions of each operation and response status code definitions
+* [Sample Messages](#Sample-Messages) to a list of successful and errored JSON request and response messages 	
 - [View API Reference and URL endpoints](#Address-API-REST-Reference)	
 
 ## Environment information
----
+
 - [Mock environment information - emulated service URL, scenarios mindmap and test data](#mock-environment-information)
 
-- [URL Endpoints and API reference ](#Address-API-REST-Reference)
-
 ## Supporting services
----- 
-* Service: Identity and access - view: [How to integrate, OAuth & JWT requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+ 
+* Identity and access - view: [How to integrate, M2M JWT, OAuth  requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 * [Customer API](../Customer%20API)
 * [Account API](../Account%20API)
+
+---
+
+<a name="Sample-Messages"></a>
+## Sample messages
+
+| Service | HTTP request types |HTTP Status Code| Description | JSON Request | JSON Response | 
+| -- | -- |:--: | -- | -- | -- | 
+| address | DELETE | `200` | Successful delete address request | [Request](sample%20messages/DELETE_200_address_LinkedIndividualWithAddress_request.json) | N/A HTTP Status Code 200 | 
+| address | POST |`200` | Create Australian address request| [Request](sample%20messages/POST_200_address_create_Australian_address_requestt.json) | [Response](sample%20messages/POST_200_address_create_Australian_address_response.json) |  
+| address | POST |`200` | Create NZ address with DPID| [Request](sample%20messages/POST_200_address_create_NZ_address_with_DPID_request.json) | [Response](sample%20messages/POST_200_address_create_NZ_address_with_DPID_response.json) |  
+| address | POST |`200` | Create unverified NZ address| [Request](sample%20messages/POST_200_address_create_unverified_NZ_address_request.json) | [Response](sample%20messages/POST_200_address_create_unverified_NZ_address_response.json) |  
+| address | POST |`400` | ADR103 Create NZ address with invalid DPID request| [Request](sample%20messages/POST_400_address_ADR103_create_NZ_address_with_invalid_DPID_request.json) | [Response](sample%20messages/POST_400_address_ADR103_create_NZ_address_with_invalid_DPID_response.json) |  
+| address | POST |`400` | EV1100 NZ address with missing mandatory fields request| [Request](sample%20messages/POST_400_address_EV1100_create_NZ_address_with_missing_mandatory_fields_request.json) | [Response](sample%20messages/POST_400_address_EV1100_create_NZ_address_with_missing_mandatory_fields_response.json) |  
+| address | PUT |`200` | Update address with Cusomer Account Linked to PB request| [Request](sample%20messages/PUT_200_address_CusomerAccountLinkedToPB_request.json) | N/A HTTP Status Code 200 |  
+
 
 <a name="Address-API-REST-Reference"></a>
 ## Address URL Endpoints and API Reference

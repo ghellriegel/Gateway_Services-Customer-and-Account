@@ -1,0 +1,18 @@
+{
+    "AccountID": "132243158INC002",
+    "AccountIDType": "ACC",
+    "Address": {
+        "District": "Wellington",
+        "Country": "NZ",
+        "City": "Wellington",
+        "SubProvince": "Wellington",
+        "Street2": "Hataitai",
+        "Street": "Evans Bay Parade",
+        "PostCode": "5512",
+        "SubDistrict": "Wellington",
+        "Unit": "258 PIER",
+        "Attention": "Salma Hayek",
+        "Urbanisation": "Wellington"
+    },
+    "Type": "PRFMAL"
+}

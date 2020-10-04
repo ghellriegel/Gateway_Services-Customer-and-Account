@@ -1,0 +1,17 @@
+{
+    "AddressID": 1004733565010,
+    "Address": {
+        "District": "District9",
+        "Country": "US",
+        "City": "Kansas",
+        "SubProvince": "Province",
+        "UnitType": "UNIT",
+        "Street2": "12345",
+        "Street": "1234 221B Baker Street",
+        "PostCode": "90210-0800",
+        "SubDistrict": "SubDistrict9",
+        "Unit": "1",
+        "Attention": "Dr Strange",
+        "State": "US-AK"
+    }
+}
