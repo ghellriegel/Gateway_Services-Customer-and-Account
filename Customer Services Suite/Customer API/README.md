@@ -35,7 +35,7 @@ The customer API provides general information about a customer. It is one of sev
 | customer | `200` | Successfull Request | [Request](sample%20messages/POST_200_customer_request.json) | [Response](sample%20messages/POST_200_customer_response.json) | 
 | customer | `400` | Non-existent IRD number | [Request](sample%20messages/POST_400_customer_CST404_non-existent_IRD_number_request.json) | [Response](sample%20messages/POST_400_customer_CST404_non-existent_IRD_number_response.json) |
 | customer | `400` | Hyphenated IRD number | [Request](sample%20messages/POST_400_customer_EV1100_hyphenated_IRD_number_request.json) | [Response](sample%20messages/POST_400_customer_EV1100_hyphenated_IRD_number_response.json) |
-| customer | `400` | Missing CustomerIDType | [Request](sample%20messages/POST_400_customer_EV1100_missing_CustomerIDType_request.json) | [Response](sample%20messages/POST_400_customer_EV1100_missing_CustomerIDType_response.json) |
+| customer | `400` | Missing Customer ID Type | [Request](sample%20messages/POST_400_customer_EV1100_missing_CustomerIDType_request.json) | [Response](sample%20messages/POST_400_customer_EV1100_missing_CustomerIDType_response.json) |
 
 
 <a name="Customer-API-REST-Reference"></a>
