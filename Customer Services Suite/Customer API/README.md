@@ -25,7 +25,7 @@ The customer API provides general information about a customer. It is one of sev
 
 ## Supporting services
 
-* Service: Identity and access - view: [How to integrate, OAuth, JWT requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
+* Identity and access - view: [How to integrate, M2M JWT, OAuth  requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 
 ---
 
@@ -93,7 +93,8 @@ The customer API provides general information about a customer. It is one of sev
 	```
 
 ### Test scenarios report template
-* [Download Test Scenarios report template](Customer%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
+* Download [Test Scenarios Report Template](Customer%20API%20-%20Test%20Report%20Template.docx)
+
 
 
 
