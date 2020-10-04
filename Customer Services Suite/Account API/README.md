@@ -28,6 +28,19 @@ The account API provides either a list of accounts for an identified customer or
 
 ---
 
+<a name="Sample-Messages"></a>
+### Sample messages
+
+| Service | HTTP Status Code| Description | JSON Request | JSON Response | 
+| -- | :--: | -- | -- | -- | 
+| account | `200` | Account with FAM account | [Request](sample%20messages/POST_200_Account_with_FAM_account_request.json) | [Response](sample%20messages/POST_200_Account_with_FAM_account_response.json) | 
+| account | `200` | Account with GST account | [Request](sample%20messages/POST_200_Account_with_GST_account_request.json) | [Response](sample%20messages/POST_200_Account_with_GST_account_response.json) |
+| account | `200` | Account with INC account | [Request](sample%20messages/POST_200_Account_with_INC_account_request.json) | [Response](sample%20messages/POST_200_Account_with_INC_account_response.json) |
+| list | `200` | List Request| [Request](sample%20messages/POST_200_list_request.json) | [Response](sample%20messages/POST_200_list_response.json) |
+| account | `400` | EV1022 error | [Request](sample%20messages/POST_400_account_EV1022_request.json) | [Response](sample%20messages/POST_400_account_EV1022_response.json) |
+| list | `400` | EV1100 error | [Request](sample%20messages/POST_400_list_EV1100_request.json) | [Response](sample%20messages/POST_400_list_EV1100_response.json) |
+
+
 <a name="Account-API-REST-Reference"></a>
 ## Account API REST Reference and URL Endpoints
 
@@ -53,17 +66,6 @@ The account API provides either a list of accounts for an identified customer or
 ![Mock Scenarios](../images/Account%20API%20Mock%20Service.png)
 
 
-<a name="Sample-Messages"></a>
-### Sample messages
-
-| Service | HTTP Status Code| Description | JSON Request | JSON Response | 
-| -- | :--: | -- | -- | -- | 
-| account | `200` | Account with FAM account | [Request](sample%20messages/POST_200_Account_with_FAM_account_request.json) | [Response](sample%20messages/POST_200_Account_with_FAM_account_response.json) | 
-| account | `200` | Account with GST account | [Request](sample%20messages/POST_200_Account_with_GST_account_request.json) | [Response](sample%20messages/POST_200_Account_with_GST_account_response.json) |
-| account | `200` | Account with INC account | [Request](sample%20messages/POST_200_Account_with_INC_account_request.json) | [Response](sample%20messages/POST_200_Account_with_INC_account_response.json) |
-| list | `200` | List Request| [Request](sample%20messages/POST_200_list_request.json) | [Response](sample%20messages/POST_200_list_response.json) |
-| account | `400` | EV1022 error | [Request](sample%20messages/POST_400_account_EV1022_request.json) | [Response](sample%20messages/POST_400_account_EV1022_response.json) |
-| list | `400` | EV1100 error | [Request](sample%20messages/POST_400_list_EV1100_request.json) | [Response](sample%20messages/POST_400_list_EV1100_response.json) |
 
 
 
