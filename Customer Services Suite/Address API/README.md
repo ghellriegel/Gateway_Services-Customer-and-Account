@@ -36,9 +36,9 @@ The address API enables the creating, updating, and deleting of the address of a
 ## Sample messages
 
 | Service | HTTP request types |HTTP Status Code| Description | JSON Request | JSON Response | 
-| -- | -- |:--: | -- | -- | -- | 
+| -- | -- | :--: | -- | -- | -- | 
 | address | DELETE | `200` | Successful delete address request | [Request](sample%20messages/DELETE_200_address_LinkedIndividualWithAddress_request.json) | N/A HTTP Status Code 200 | 
-| address | POST |`200` | Create Australian address request| [Request](sample%20messages/POST_200_address_create_Australian_address_requestt.json) | [Response](sample%20messages/POST_200_address_create_Australian_address_response.json) |  
+| address | POST |`200` | Create Australian address request| [Request](sample%20messages/POST_200_address_create_Australian_address_request.json) | [Response](sample%20messages/POST_200_address_create_Australian_address_response.json) |  
 | address | POST |`200` | Create NZ address with DPID| [Request](sample%20messages/POST_200_address_create_NZ_address_with_DPID_request.json) | [Response](sample%20messages/POST_200_address_create_NZ_address_with_DPID_response.json) |  
 | address | POST |`200` | Create unverified NZ address| [Request](sample%20messages/POST_200_address_create_unverified_NZ_address_request.json) | [Response](sample%20messages/POST_200_address_create_unverified_NZ_address_response.json) |  
 | address | POST |`400` | ADR103 Create NZ address with invalid DPID request| [Request](sample%20messages/POST_400_address_ADR103_create_NZ_address_with_invalid_DPID_request.json) | [Response](sample%20messages/POST_400_address_ADR103_create_NZ_address_with_invalid_DPID_response.json) |  
