@@ -1,0 +1,9 @@
+{
+    "errors": [
+        {
+            "code": "NAM101",
+            "type": "validation",
+            "message": "There is an existing name of this type."
+        }
+    ]
+}
