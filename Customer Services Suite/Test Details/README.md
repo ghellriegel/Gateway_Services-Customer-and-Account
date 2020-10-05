@@ -1,6 +1,6 @@
 
-![IRD logo](../Images/IRlogo.gif)
-![Software Dev](../Images/SoftwareDev.png)
+![IRD logo](../../Images/IRlogo.gif)
+![Software Dev](../../Images/SoftwareDev.png)
 
 # Customer Services Suite Test Details
 #### Release version 1.0 
