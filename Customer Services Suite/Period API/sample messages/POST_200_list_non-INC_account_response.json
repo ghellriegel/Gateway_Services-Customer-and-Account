@@ -1,0 +1,58 @@
+{
+    "Periods": [
+        {
+            "AccountType": "EMP",
+            "FilingFrequency": "PSOIM",
+            "NoticeOfAssessmentIssued": false,
+            "PeriodBegin": "2020-06-01",
+            "PeriodEnd": "2020-06-30",
+            "ReturnData": false,
+            "DefaultAssessment": 0
+        },
+        {
+            "AccountType": "EMP",
+            "FilingFrequency": "PSOIM",
+            "NoticeOfAssessmentIssued": false,
+            "PeriodBegin": "2020-05-01",
+            "PeriodEnd": "2020-05-31",
+            "ReturnData": false,
+            "DefaultAssessment": 0
+        },
+        {
+            "AccountType": "EMP",
+            "FilingFrequency": "PSOIM",
+            "NoticeOfAssessmentIssued": false,
+            "PeriodBegin": "2020-04-01",
+            "PeriodEnd": "2020-04-30",
+            "ReturnData": false,
+            "DefaultAssessment": 0
+        },
+        {
+            "AccountType": "EMP",
+            "FilingFrequency": "PSOIM",
+            "NoticeOfAssessmentIssued": false,
+            "PeriodBegin": "2020-03-01",
+            "PeriodEnd": "2020-03-31",
+            "ReturnData": false,
+            "DefaultAssessment": 0
+        },
+        {
+            "AccountType": "EMP",
+            "FilingFrequency": "PSOIM",
+            "NoticeOfAssessmentIssued": false,
+            "PeriodBegin": "2020-02-01",
+            "PeriodEnd": "2020-02-29",
+            "ReturnData": false,
+            "DefaultAssessment": 0
+        },
+        {
+            "AccountType": "EMP",
+            "FilingFrequency": "PSOIM",
+            "NoticeOfAssessmentIssued": false,
+            "PeriodBegin": "2020-01-01",
+            "PeriodEnd": "2020-01-31",
+            "ReturnData": false,
+            "DefaultAssessment": 0
+        }
+    ]
+}

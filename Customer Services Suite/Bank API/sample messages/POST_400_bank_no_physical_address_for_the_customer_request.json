@@ -1,0 +1,12 @@
+{
+    "AccountID": "132243158FBT005",
+    "AccountIDType": "ACC",
+    "NameOnAccount": "Test",
+    "International": {
+        "RoutingNumber": "242000",
+        "AccountNumber": "203330017",
+        "BankAccountType": "C",
+        "BankName": "ASB",
+        "Country": "AU"
+    }
+}

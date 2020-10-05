@@ -15,6 +15,7 @@ The bank account API enables the creating and deleting of the refund bank accoun
 ## Key documentation
 * View and download the [Bank API YAML](Bank%202020-09-28.yaml)
 * [Download the Bank API build pack](Build%20pack%20-%20Bank%20Account%20API.pdf) to view data definitions of each operation and response status code definitions
+* [Sample Messages](#Sample-Messages) to a list of successful and errored JSON request messages 
 * [View API Reference and URL endpoints](#Bank-API-REST-Reference)	
 
 ## Environment information
@@ -23,6 +24,20 @@ The bank account API enables the creating and deleting of the refund bank accoun
 ## Supporting services
 * Service: Identity and access - view: [How to integrate, M2M JWT, OAuth requests and responses message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 * [Account API](../Account%20API)
+---
+
+<a name="Sample-Messages"></a>
+### Sample messages
+
+| Service | HTTP request types | HTTP Status Code| Description | JSON Request | JSON Response | 
+| -- | -- | :--: | -- | -- | -- | 
+| bank | DELETE | `200` | Delete bank account | [Request](sample%20messages/DELETE_200_Delete_bank_request.json) | Validate HTTP Status Code | 
+| bank | DELETE | `400` | The account provided does not have an existing bank account associated | [Request](sample%20messages/DELETE_400_Delete_bank_account_provided_does_not_have_an_existing_bank_account.json) | Validate HTTP Status Code  | 
+| bank | POST | `200` | Create international bank account | [Request](sample%20messages/POST_200_bank_Create_international_bank_account_request.json) | Validate HTTP Status Code  | 
+| bank | POST | `200` | Create NZ bank account | [Request](sample%20messages/POST_200_bank_Create_NZ_bank_account_request.json) | Validate HTTP Status Code  | 
+| bank | POST | `200` | Create NZ credit union bank account | [Request](sample%20messages/POST_200_bank_Create_NZ_credit_union_bank_account.json) | Validate HTTP Status Code  | 
+| bank | POST | `400` | There is no physical address for the customer or account for the provided country | [Request](sample%20messages/POST_400_bank_no_physical_address_for_the_customer_request.json) | Validate HTTP Status Code  | 
+
 
 <a name="Contact-API-REST-Reference"></a>
 ## Bank API REST Reference and URL endpoints
@@ -43,7 +58,6 @@ The bank account API enables the creating and deleting of the refund bank accoun
 
 <a name="mock-environment-information"></a>
 ## Mock environment information
----
 
 ### Mock emulated service URL
 * Landing Page https://mock-cus.ird.digitalpartner.services 

@@ -1,0 +1,16 @@
+{
+    "Accounts": [
+        {
+            "ID": "512100301REB001",
+            "IDType": "ACC"
+        },
+        {
+            "ID": "512100301INC003",
+            "IDType": "ACC"
+        },
+        {
+            "ID": "512100301AIL023",
+            "IDType": "ACC"
+        }
+    ]
+}
