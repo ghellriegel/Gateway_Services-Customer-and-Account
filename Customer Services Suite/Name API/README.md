@@ -65,11 +65,6 @@ The name API enables the creating, updating, and deleting of the customer’s na
 <a name="mock-environment-information"></a>
 ## Mock environment information
 
-### Name mock scenarios mindmap
-
-[View larger image](images/Name%20API%20Emulator%20Mindmap.png)
-![Mock Scenarios](images/Name%20API%20Emulator%20Mindmap.png)
-
 ### Mock emulated service URL
 * Landing Page https://mock-cus.ird.digitalpartner.services 
 
@@ -77,6 +72,7 @@ The name API enables the creating, updating, and deleting of the customer’s na
 
 [View larger image](../images/Name%20API%20Mock%20Service.png)
 ![Mock Scenarios](../images/Name%20API%20Mock%20Service.png)
+
 
 ### Mock environment authentication
 * Consumers of this mock service must be authenticated.
