@@ -1,0 +1,17 @@
+{
+    "AccountID": "132243158INC002",
+    "AccountIDType": "ACC",
+    "Address": {
+        "SubDistrict": "Wellington",
+        "District": "Wellington",
+        "Country": "NZ",
+        "Unit": "258 PIER",
+        "City": "Wellington",
+        "SubProvince": "Wellington",
+        "Attention": "Salma Hayek",
+        "Street2": "Hataitai",
+        "Urbanisation": "Wellington",
+        "PostCode": "5512"
+    },
+    "Type": "PRFMAL"
+}

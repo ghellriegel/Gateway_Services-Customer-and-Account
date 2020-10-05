@@ -1,0 +1,12 @@
+{
+    "AccountID": "132243158GST004",
+    "AccountIDType": "ACC",
+    "NameOnAccount": "Test",
+    "NewZealand": {
+        "Bank": "03",
+        "Branch": "1528",
+        "Account": "00065296",
+        "Suffix": "0000",
+        "Reference": "CreditUnion"
+    }
+}

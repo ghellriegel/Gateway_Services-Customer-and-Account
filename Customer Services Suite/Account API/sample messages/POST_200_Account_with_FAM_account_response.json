@@ -1,0 +1,57 @@
+{
+    "Account": {
+        "ID": "132243158FAM005",
+        "IDType": "ACC",
+        "AccountType": "FAM",
+        "FilingFrequency": "ITN03C",
+        "Status": "ACT",
+        "FilingChannel": "API",
+        "BankAccount": "10-1000-01000000-0100",
+        "NameOnBankAccount": "Peter Parker",
+        "Commence": "2010-01-01",
+        "Cease": "9999-12-31",
+        "Address": [
+            {
+                "AddressID": 1004723453056,
+                "Type": "PRFMAL",
+                "Street": "3 HA CRESCENT",
+                "Street2": "",
+                "Unit": "",
+                "UnitType": "BLDG",
+                "City": "AUCKLAND",
+                "State": "",
+                "PostCode": "2104",
+                "Country": "NZ",
+                "Attention": "",
+                "Urbanisation": "WIRI",
+                "District": "",
+                "SubDistrict": "",
+                "SubProvince": "",
+                "Formatted": "3 HA CRESCENT WIRI AUCKLAND 2104",
+                "Updated": "2020-05-27T11:46:39"
+            }
+        ],
+        "Contact": [
+            {
+                "ContactID": 1578864256,
+                "ContactType": "SCNDRY",
+                "Name": "Peter Parker",
+                "Updated": "2020-07-08T10:30:24",
+                "Phone": [
+                    {
+                        "PhoneID": 1004734460042,
+                        "PhoneType": "BSN",
+                        "Country": "NZ",
+                        "AreaCode": "",
+                        "PhoneNumber": "048997445",
+                        "Extension": "04"
+                    }
+                ]
+            }
+        ],
+        "WFFTC": {
+            "PaymentFrequency": "FAM1A",
+            "CurrentPayer": "IRD"
+        }
+    }
+}

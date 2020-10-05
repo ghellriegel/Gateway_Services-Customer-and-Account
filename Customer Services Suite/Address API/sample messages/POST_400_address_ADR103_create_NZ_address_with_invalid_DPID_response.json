@@ -1,0 +1,9 @@
+{
+    "errors": [
+        {
+            "code": "ADR103",
+            "type": "validation",
+            "message": "The DPID provided is invalid."
+        }
+    ]
+}
