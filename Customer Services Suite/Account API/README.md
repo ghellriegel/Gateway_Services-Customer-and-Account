@@ -92,10 +92,6 @@ The account API provides either a list of accounts for an identified customer or
 	Authorization: {JWT}
 	```
 	
-<a href="smaple-message"></a>
-## Sample Message
-
-
 ### Test scenarios report template
 
 - Download [Test Scenarios report template](Account%20API%20-%20Test%20Report%20Template_v1.1.docx)
