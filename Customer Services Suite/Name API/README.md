@@ -40,7 +40,7 @@ The name API enables the creating, updating, and deleting of the customer’s na
 | name | POST | `200` | Create trade name | [Request](sample%20messages/POST_200_name_Create_trade_name_request.json) | [Request](sample%20messages/POST_200_name_Create_trade_name_response.json) | 
 | name | POST | `400` | NAM101 - There is an existing name of this type | [Request](sample%20messages/POST_400_name_NAM101_existing_name_of_this_type_request.json) | [Request](sample%20messages/POST_400_name_NAM101_existing_name_of_this_type_response.json) | 
 | name | PUT | `200` | Update preferred name | [Request](sample%20messages/PUT_200_name_Update_preferred_name_request.json) | Validate HTTP Status Code | 
-| name | PUT | `200` | Update trade name | [Request](sample%20messages/PUT_200_name_Update_trade name_request.json) | Validate HTTP Status Code | 
+| name | PUT | `200` | Update trade name | [Request](sample%20messages/PUT_200_name_Update_trade_name_request.json) | Validate HTTP Status Code | 
 
 <a name="Name-API-REST-Reference"></a>
 ## Name API REST Reference
