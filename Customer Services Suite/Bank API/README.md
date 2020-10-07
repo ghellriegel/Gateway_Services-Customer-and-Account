@@ -92,7 +92,7 @@ The bank account API enables the creating and deleting of the refund bank accoun
 		
 ### Test scenarios report template
 
-- [Download Test Scenarios report template](Bank%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
+- [Download Test Scenarios report template](Bank%20API%20-%20Test%20Report%20Template_v1.1.docx) 
 
 
 
