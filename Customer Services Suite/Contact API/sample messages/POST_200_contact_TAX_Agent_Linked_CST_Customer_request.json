@@ -1,0 +1,17 @@
+{
+    "CustomerID": "1512100301",
+    "CustomerIDType": "CST",
+    "Contact": {
+        "ContactType": "SCNDRY",
+        "Name": "New new Gateway",
+        "Phone": [
+            {
+                "PhoneType": "BSN",
+                "Country": "NZ",
+                "AreaCode": "",
+                "PhoneNumber": "044451153",
+                "Extension": ""
+            }
+        ]
+    }
+}
