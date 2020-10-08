@@ -102,7 +102,7 @@ The address API enables the creating, updating, and deleting of the address of a
 <a name="test-environment-information"></a>
 ### Test scenarios report template
 
-- [Download Test Scenarios report template](Address%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
+- [Download Test Scenarios report template](Address%20API%20-%20Test%20Report%20Template_v1.0.docx)
 
 
 
