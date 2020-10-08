@@ -15,6 +15,7 @@ The contact API enables the creating, updating, and deleting of the contact deta
 ## Key documentation
 * View and download the [Contact API YAML](Contact%202020-09-28.yaml)
 * [Download the Contact API build pack](Build%20pack%20-%20Contact%20API.pdf) to view data definitions of each operation and response status code definitions
+* [Sample Messages](#Sample-Messages) to a list of successful and errored JSON request messages 
 * [Contact API Reference and URL endpoints](#Contact-API-REST-Reference)	
 
 ## Environment information
@@ -24,6 +25,23 @@ The contact API enables the creating, updating, and deleting of the contact deta
 * Service: Identity and access - view: [How to integrate, M2M JWT & OAuth message samples and build pack](https://github.com/InlandRevenue/Gateway_Services-Access/tree/master/Identity%20and%20Access)
 * [Customer API](../Customer%20API)
 * [Account API](../Account%20API)
+
+---
+
+<a name="Sample-Messages"></a>
+### Sample messages
+
+| Service | HTTP request types | HTTP Status Code| Description | JSON Request | JSON Response | 
+| -- | -- | :--: | -- | -- | -- | 
+| contact | DELETE | 200 | Successful delete contact request | [Request](DELETE_200_contact_request.json) | Review HTTP status Code  | 
+| contact | DELETE | 400 | CST404 - Contact has already been deleted | [Request](DELETE_400_CST404_contact_already_been_deleted_request.json)| [Response](DELETE_400_CST404_contact_already_been_deleted_response.json)  |
+| contact | POST | 200 | Create account level request | [Request](POST_200_contact_create_account_level_request.json) | [Response](POST_200_contact_create_account_level_response.json) | 
+| contact | POST | 200 | TAX Agent Linked CST Customer | [Request](POST_200_contact_TAX_Agent_Linked_CST_Customer_request) | [Response](POST_200_contact_TAX_Agent_Linked_CST_Customer_response.json) |
+| contact | POST | 400 | EV1100 - Contact CustomerIDType not equal to CST or IRD | [Request](POST_400_EV1100_contact_CustomerIDType_not_equal_to_CST_or_IRD_request.json) | [Response](POST_400_EV1100_contact_CustomerIDType_not_equal_to_CST_or_IRD_response.json)|
+| contact | PUT | 200 | Successful update contact request | [Request](PUT_200_contact_request)| Review HTTP status Code | 
+| phone   | DELETE | 200 | Successful delete phone request | [Request](DELETE_200_phone_request.json) | Review HTTP status Code  | 
+| phone   | POST | 200 | Successful create phone request | [Request](POST_200_phone_create_request.json) | [Response](POST_200_phone_create_response.json)  | 
+| phone   | PUT | 200 | Successful update phone request | [Request](PUT_200_phone_request.json) | Review HTTP status Code | 
 
 <a name="Contact-API-REST-Reference"></a>
 ## Contact API REST Reference
@@ -35,7 +53,7 @@ The contact API enables the creating, updating, and deleting of the contact deta
 
 #### Contact API - `{Scheme Authority}/gateway/contact/{Service}`
 | Service | HTTP request types | Description | 
-| :--: | :--: | -- |
+| :--: | :--: | -- | 
 | contact | `POST` | Adds a contact to the identified customer<br/>or<br/>Adds a contact to the identified account | 
 | contact | `PUT` | Updates the name of an identified contact - this can be either a customer contact or an account contact | 
 | contact | `DELETE` | This web service is used to delete a contact | 
@@ -46,12 +64,15 @@ The contact API enables the creating, updating, and deleting of the contact deta
 
 > The `status` service might not be available in the mock environment.
 
+
+
 <a name="mock-environment-information"></a>
 ## Mock environment information
 ---
 
 ### Mock emulated service URL
 * Landing Page https://mock-cus.ird.digitalpartner.services 
+
 
 ### Contact mock scenarios mindmap
 
@@ -83,4 +104,4 @@ The contact API enables the creating, updating, and deleting of the contact deta
 
 ### Test scenarios report template
 
-* [Download Test Scenarios report template](Contact%20API-%20Test%20Report%20Template.docx) - *Coming Soon*
+* [Download Test Scenarios report template](Contact%20API%20-%20Test%20Report%20Template.docx)
