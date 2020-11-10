@@ -1,0 +1,1054 @@
+swagger: '2.0'
+info: 
+  title: Contact
+  description: New eFile Contact API
+  version: ""
+host: 'eservices-test-gateway.npnsp.ird.govt.nz'
+basePath: /secure/gateway/contact/
+schemes: 
+  - https
+paths: 
+  /contact: 
+    post: 
+      tags: 
+        - Contact Add
+      summary: Contact Add
+      description: ""
+      operationId: contactPOST
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/contact_POST_Request'
+      responses: 
+        '200': 
+          description: 'HttpStatus: 200 - OK'
+          schema: 
+            $ref: '#/definitions/contact_POST_Response200'
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/contact_POST_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/contact_POST_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/contact_POST_ResponseDefault'
+    delete: 
+      tags: 
+        - Contact Delete
+      summary: Contact Delete
+      description: ""
+      operationId: contactDELETE
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/contact_DELETE_Request'
+      responses: 
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/contact_DELETE_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/contact_DELETE_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/contact_DELETE_ResponseDefault'
+    put: 
+      tags: 
+        - Contact Update
+      summary: Contact Update
+      description: ""
+      operationId: contactPUT
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/contact_PUT_Request'
+      responses: 
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/contact_PUT_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/contact_PUT_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/contact_PUT_ResponseDefault'
+  /phone: 
+    post: 
+      tags: 
+        - Phone Add
+      summary: Phone Add
+      description: ""
+      operationId: phonePOST
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/phone_POST_Request'
+      responses: 
+        '200': 
+          description: 'HttpStatus: 200 - OK'
+          schema: 
+            $ref: '#/definitions/phone_POST_Response200'
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/phone_POST_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/phone_POST_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/phone_POST_ResponseDefault'
+    delete: 
+      tags: 
+        - Phone Delete
+      summary: Phone Delete
+      description: ""
+      operationId: phoneDELETE
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/phone_DELETE_Request'
+      responses: 
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/phone_DELETE_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/phone_DELETE_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/phone_DELETE_ResponseDefault'
+    put: 
+      tags: 
+        - Phone Update
+      summary: Phone Update
+      description: ""
+      operationId: phonePUT
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/phone_PUT_Request'
+      responses: 
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/phone_PUT_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/phone_PUT_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/phone_PUT_ResponseDefault'
+definitions: 
+  contact_POST_Request: 
+    type: object
+    required: 
+      - Contact
+    properties: 
+      CustomerID: 
+        type: string
+        description: '<p>The unique identifier of a customer that can be retrieved through the customer information service.</p>'
+        maxLength: 10
+        minLength: 9
+      CustomerIDType: 
+        type: string
+        description: '<p>The type of unique identifier of a customer that can be retrieved through the customer information service.</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>IRD</td><td>IRD number</td></tr><tr><td>CST</td><td>Customer Identifier</td></tr></tbody></table>'
+        maxLength: 3
+        minLength: 3
+        enum: 
+          - IRD
+          - CST
+      AccountID: 
+        type: string
+        description: '<p>The unique identifier of an account that can be retrieved through the account information service.</p>'
+        maxLength: 15
+        minLength: 7
+      AccountIDType: 
+        type: string
+        description: '<p>The unique identifier of an account that can be retrieved through the account information service.</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>ACC</td><td>Account ID</td></tr><tr><td>CMPF</td><td>Complying Fund ID</td></tr><tr><td>KSF</td><td>KiwiSaver Schemes ID</td></tr></tbody></table>'
+        maxLength: 6
+        minLength: 3
+        enum: 
+          - ACC
+          - CMPF
+          - KSF
+      Contact: 
+        type: object
+        required: 
+          - ContactType
+          - Phone
+        properties: 
+          ContactType: 
+            type: string
+            description: '<p>The type of contact.</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>PRIMRY</td><td>Primary</td></tr><tr><td>SCNDRY</td><td>Secondary</td></tr></tbody></table>'
+            maxLength: 6
+            minLength: 6
+            enum: 
+              - PRIMRY
+              - SCNDRY
+          Name: 
+            type: string
+            description: '<p>The name of the contact.</p>'
+            maxLength: 255
+          Phone: 
+            type: array
+            items: 
+              type: object
+              required: 
+                - PhoneType
+                - Country
+                - PhoneNumber
+              properties: 
+                PhoneType: 
+                  type: string
+                  description: '<p>The type of phone.</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>BSN</td><td>Business phone</td></tr><tr><td>BSNFAX</td><td>Fax</td></tr><tr><td>CELL</td><td>Mobile phone</td></tr><tr><td>HOM</td><td>Home phone</td></tr></tbody></table>'
+                  maxLength: 6
+                  minLength: 3
+                  enum: 
+                    - BSN
+                    - BSNFAX
+                    - CELL
+                    - HOM
+                Country: 
+                  type: string
+                  description: '<p>The ISO 3166-1 alpha-2 country code indicating the country for the phone number.</p>'
+                  maxLength: 2
+                  minLength: 2
+                AreaCode: 
+                  type: string
+                  description: '<p>The area code of the phone number.</p>'
+                  maxLength: 5
+                PhoneNumber: 
+                  type: string
+                  description: '<p>The phone number, without country code.</p>'
+                  maxLength: 15
+                  minLength: 1
+                Extension: 
+                  type: string
+                  description: '<p>The extension of the phone number.</p>'
+                  maxLength: 10
+  contact_DELETE_Request: 
+    type: object
+    required: 
+      - ContactID
+    properties: 
+      ContactID: 
+        type: number
+        format: int64
+        description: '<p>The unique identifier of a contact for the customer. This is required when updating or deleting a contact.</p>'
+  contact_PUT_Request: 
+    type: object
+    required: 
+      - ContactID
+      - Contact
+    properties: 
+      ContactID: 
+        type: number
+        format: int64
+        description: '<p>The unique identifier of a contact for the customer. This is required when updating or deleting a contact.</p>'
+      Contact: 
+        type: object
+        required: 
+          - Name
+        properties: 
+          Name: 
+            type: string
+            description: '<p>The name of the contact.</p>'
+            maxLength: 255
+  phone_POST_Request: 
+    type: object
+    required: 
+      - ContactID
+    properties: 
+      ContactID: 
+        type: number
+        format: int64
+        description: '<p>The unique identifier of a contact for the customer. This is required when updating or deleting a contact.</p>'
+      Phone: 
+        type: object
+        required: 
+          - PhoneType
+          - Country
+          - PhoneNumber
+        properties: 
+          PhoneType: 
+            type: string
+            description: '<p>The type of phone.</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>BSN</td><td>Business phone</td></tr><tr><td>BSNFAX</td><td>Fax</td></tr><tr><td>CELL</td><td>Mobile phone</td></tr><tr><td>HOM</td><td>Home phone</td></tr></tbody></table>'
+            maxLength: 6
+            minLength: 3
+            enum: 
+              - BSN
+              - BSNFAX
+              - CELL
+              - HOM
+          Country: 
+            type: string
+            description: '<p>The ISO 3166-1 alpha-2 country code indicating the country for the phone number.</p>'
+            maxLength: 2
+            minLength: 2
+          AreaCode: 
+            type: string
+            description: '<p>The area code of the phone number.</p>'
+            maxLength: 5
+          PhoneNumber: 
+            type: string
+            description: '<p>The phone number, without country code.</p>'
+            maxLength: 15
+            minLength: 1
+          Extension: 
+            type: string
+            description: '<p>The extension of the phone number.</p>'
+            maxLength: 10
+  phone_DELETE_Request: 
+    type: object
+    required: 
+      - PhoneID
+    properties: 
+      PhoneID: 
+        type: number
+        format: int64
+        description: '<p>The unique identifier of a phone number. This is required when updating or deleting a phone number.</p>'
+  phone_PUT_Request: 
+    type: object
+    required: 
+      - PhoneID
+    properties: 
+      PhoneID: 
+        type: number
+        format: int64
+        description: '<p>The unique identifier of a phone number. This is required when updating or deleting a phone number.</p>'
+      Phone: 
+        type: object
+        required: 
+          - PhoneType
+          - Country
+        properties: 
+          PhoneType: 
+            type: string
+            description: '<p>The type of phone.</p><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>BSN</td><td>Business phone</td></tr><tr><td>BSNFAX</td><td>Fax</td></tr><tr><td>CELL</td><td>Mobile phone</td></tr><tr><td>HOM</td><td>Home phone</td></tr></tbody></table>'
+            maxLength: 6
+            minLength: 3
+            enum: 
+              - BSN
+              - BSNFAX
+              - CELL
+              - HOM
+          Country: 
+            type: string
+            description: '<p>The ISO 3166-1 alpha-2 country code indicating the country for the phone number.</p>'
+            maxLength: 2
+            minLength: 2
+          AreaCode: 
+            type: string
+            description: '<p>The area code of the phone number.</p>'
+            maxLength: 5
+          PhoneNumber: 
+            type: string
+            description: '<p>The phone number, without country code.</p>'
+            maxLength: 15
+            minLength: 1
+          Extension: 
+            type: string
+            description: '<p>The extension of the phone number.</p>'
+            maxLength: 10
+  contact_POST_Response200: 
+    type: object
+    required: 
+      - ContactID
+    properties: 
+      ContactID: 
+        type: number
+        format: int64
+        description: '<p>The unique identifier of a contact for the customer. This is required when updating or deleting a contact.</p>'
+  contact_POST_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_POST_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_POST_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_DELETE_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_DELETE_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_DELETE_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_PUT_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_PUT_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_PUT_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_POST_Response200: 
+    type: object
+    required: 
+      - PhoneID
+    properties: 
+      PhoneID: 
+        type: number
+        format: int64
+        description: '<p>The unique identifier of a phone number. This is required when updating or deleting a phone number.</p>'
+  phone_POST_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_POST_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_POST_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_DELETE_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_DELETE_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_DELETE_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_PUT_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_PUT_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_PUT_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1020</td><td>Authentication failure means the token (JWT or OAuth) provided is not valid</td></tr><tr><td>EV1021</td><td>No OAuth or JWT token is present as an HTTP header</td></tr><tr><td>EV1022</td><td>Access is not permitted for the requester to perform this operation for the submitted identifier</td></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1020
+                - EV1021
+                - EV1022
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message

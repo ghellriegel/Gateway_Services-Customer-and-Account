@@ -1,0 +1,945 @@
+swagger: '2.0'
+info: 
+  title: Contact
+  description: New eFile Contact API
+  version: ""
+host: 'eservices-test-gateway.npnsp.ird.govt.nz'
+basePath: /secure/gateway/contact/
+schemes: 
+  - https
+paths: 
+  /contact: 
+    post: 
+      tags: 
+        - Contact Add
+      summary: Contact Add
+      description: ""
+      operationId: contactPOST
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/contact_POST_Request'
+      responses: 
+        '200': 
+          description: 'HttpStatus: 200 - OK'
+          schema: 
+            $ref: '#/definitions/contact_POST_Response200'
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/contact_POST_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/contact_POST_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/contact_POST_ResponseDefault'
+    delete: 
+      tags: 
+        - Contact Delete
+      summary: Contact Delete
+      description: ""
+      operationId: contactDELETE
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/contact_DELETE_Request'
+      responses: 
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/contact_DELETE_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/contact_DELETE_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/contact_DELETE_ResponseDefault'
+    put: 
+      tags: 
+        - Contact Update
+      summary: Contact Update
+      description: ""
+      operationId: contactPUT
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/contact_PUT_Request'
+      responses: 
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/contact_PUT_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/contact_PUT_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/contact_PUT_ResponseDefault'
+  /phone: 
+    post: 
+      tags: 
+        - Phone Add
+      summary: Phone Add
+      description: ""
+      operationId: phonePOST
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/phone_POST_Request'
+      responses: 
+        '200': 
+          description: 'HttpStatus: 200 - OK'
+          schema: 
+            $ref: '#/definitions/phone_POST_Response200'
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/phone_POST_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/phone_POST_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/phone_POST_ResponseDefault'
+    delete: 
+      tags: 
+        - Phone Delete
+      summary: Phone Delete
+      description: ""
+      operationId: phoneDELETE
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/phone_DELETE_Request'
+      responses: 
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/phone_DELETE_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/phone_DELETE_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/phone_DELETE_ResponseDefault'
+    put: 
+      tags: 
+        - Phone Update
+      summary: Phone Update
+      description: ""
+      operationId: phonePUT
+      consumes: 
+        - 'application/json; charset=utf-8'
+      produces: 
+        - 'application/json; charset=utf-8'
+      parameters: 
+        - name: body
+          in: body
+          required: true
+          schema: 
+            $ref: '#/definitions/phone_PUT_Request'
+      responses: 
+        '400': 
+          description: 'HttpStatus: 400 - BadRequest'
+          schema: 
+            $ref: '#/definitions/phone_PUT_Response400'
+        '500': 
+          description: 'HttpStatus: 500 - InternalServerError'
+          schema: 
+            $ref: '#/definitions/phone_PUT_Response500'
+        default: 
+          description: ' '
+          schema: 
+            $ref: '#/definitions/phone_PUT_ResponseDefault'
+definitions: 
+  contact_POST_Request: 
+    type: object
+    required: 
+      - Contact
+    properties: 
+      CustomerID: 
+        type: string
+      CustomerIDType: 
+        type: string
+      AccountID: 
+        type: string
+      AccountIDType: 
+        type: string
+      Contact: 
+        type: object
+        required: 
+          - ContactType
+          - Name
+          - Phone
+        properties: 
+          ContactType: 
+            type: string
+            description: '<p>The type of contact.</p>'
+          Name: 
+            type: string
+          Phone: 
+            type: array
+            items: 
+              type: object
+              required: 
+                - PhoneType
+                - Country
+              properties: 
+                PhoneType: 
+                  type: string
+                  description: '<p>The type of phone.</p>'
+                Country: 
+                  type: string
+                  description: '<p>The ISO 3166-1 alpha-2 country code indicating the country for the phone number.</p>'
+                AreaCode: 
+                  type: string
+                  description: '<p>The area code of the phone number.</p>'
+                PhoneNumber: 
+                  type: string
+                  description: '<p>The phone number, without country code.</p>'
+                Extension: 
+                  type: string
+                  description: '<p>The extension of the phone number.</p>'
+  contact_DELETE_Request: 
+    type: object
+    required: 
+        - ContactID
+    properties: 
+      ContactID: 
+        type: number
+        format: int64
+  contact_PUT_Request: 
+    type: object
+    required: 
+      - Contact
+    properties: 
+      ContactID: 
+        type: number
+        format: int64
+      Contact: 
+        type: object
+        required: 
+          - Name
+        properties: 
+          Name: 
+            type: string
+  phone_POST_Request: 
+    type: object
+    required: 
+      - ContactID
+    properties: 
+      ContactID: 
+        type: number
+        format: int64
+      Phone: 
+        type: object
+        required: 
+          - PhoneType
+          - Country
+        properties: 
+          PhoneType: 
+            type: string
+            description: '<p>The type of phone.</p>'
+          Country: 
+            type: string
+            description: '<p>The ISO 3166-1 alpha-2 country code indicating the country for the phone number.</p>'
+          AreaCode: 
+            type: string
+            description: '<p>The area code of the phone number.</p>'
+          PhoneNumber: 
+            type: string
+            description: '<p>The phone number, without country code.</p>'
+          Extension: 
+            type: string
+            description: '<p>The extension of the phone number.</p>'
+  phone_DELETE_Request: 
+    type: object
+    required: 
+        - PhoneID
+    properties: 
+      PhoneID: 
+        type: number
+        format: int64
+  phone_PUT_Request: 
+    type: object
+    required: 
+        - PhoneID
+        - Phone
+    properties: 
+      PhoneID: 
+        type: number
+        format: int64
+      Phone: 
+        type: object
+        required: 
+          - PhoneType
+          - Country
+        properties: 
+          PhoneType: 
+            type: string
+            description: '<p>The type of phone.</p>'
+          Country: 
+            type: string
+            description: '<p>The ISO 3166-1 alpha-2 country code indicating the country for the phone number.</p>'
+          AreaCode: 
+            type: string
+            description: '<p>The area code of the phone number.</p>'
+          PhoneNumber: 
+            type: string
+            description: '<p>The phone number, without country code.</p>'
+          Extension: 
+            type: string
+            description: '<p>The extension of the phone number.</p>'
+  contact_POST_Response200: 
+    type: object
+    required: 
+      - ContactID
+    properties: 
+      ContactID: 
+        type: number
+        format: int64
+        description: Add description
+  contact_POST_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_POST_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_POST_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_DELETE_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_DELETE_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_DELETE_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_PUT_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_PUT_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  contact_PUT_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_POST_Response200: 
+    type: object
+    required: 
+      - PhoneID
+    properties: 
+      PhoneID: 
+        type: number
+        format: int64
+        description: Add description
+  phone_POST_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_POST_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_POST_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_DELETE_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_DELETE_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_DELETE_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_PUT_Response400: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_PUT_Response500: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EU6001</td><td>Unexpected error occurred</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EU6001
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
+  phone_PUT_ResponseDefault: 
+    type: object
+    required: 
+      - errors
+    properties: 
+      errors: 
+        type: array
+        description: Validation array
+        items: 
+          type: object
+          description: Errors Object
+          required: 
+            - code
+            - type
+            - message
+          properties: 
+            code: 
+              type: string
+              description: 'Error code for validation, security, or server type responses.<br><br><table><tbody><tr><th>code</th><th>description</th></tr><tr><td>EV1100</td><td>Invalid input parameters. Please check documentation</td></tr></tbody></table>'
+              maxLength: 6
+              enum: 
+                - EV1100
+            type: 
+              type: string
+              description: Type of validation code returned
+              enum: 
+                - result
+                - security
+                - server
+                - validation
+            message: 
+              type: string
+              description: Error Message
