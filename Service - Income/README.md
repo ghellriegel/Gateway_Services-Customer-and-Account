@@ -17,7 +17,7 @@ The Income API described in this build pack document provides a mechanism for ex
 ## Key documentation
 ---
 - YAML file
-	- View and download the [Income API YAML](Income%20API%202020-07-16.yaml)
+	- View and download the [Income API YAML](Income%20API%202020-11-25.yaml)
 
 - Build pack 
 	- [Download the Income API build pack](Gateway%20Services%20Build%20pack%20-%20Income%20API.pdf) to view data definitions of each operation and response status code definitions
@@ -102,7 +102,6 @@ MOCK-51 | Any IRD number not used in any other scenarios. E.g. 023123023 | 416 |
 | End point|  URL|
 |--|--|
 | Testing | https://test5.services.ird.govt.nz:4046/gateway/income/list |    
-| Pre-Production | https://test6.services.ird.govt.nz:4046/gateway/income/list | 
 
 >**NOTE:** These endpoints are subject to change due to environment updates in the future. 
 
