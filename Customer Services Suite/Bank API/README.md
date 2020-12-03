@@ -13,8 +13,8 @@ The bank account API enables the creating and deleting of the refund bank accoun
 >**NOTE:** The Bank API is only available to Digital Service Providers who use X.509 Digital Certificate used for Mutual TLS on port 4046 and requires OAuth2 or JWT token.
 
 ## Key documentation
-* View and download the [Bank API YAML](Bank%202020-09-28.yaml)
-* [Download the Bank API build pack](Build%20pack%20-%20Bank%20Account%20API.pdf) to view data definitions of each operation and response status code definitions
+* View and download the [Bank API YAML](Bank%202020-09-30.yaml)
+* [Download the Bank API build pack](Build%20pack%20-%20Bank%20API.pdf) to view data definitions of each operation and response status code definitions
 * [Sample Messages](#Sample-Messages) to a list of successful and errored JSON request messages 
 * [View API Reference and URL endpoints](#Bank-API-REST-Reference)	
 
@@ -39,7 +39,7 @@ The bank account API enables the creating and deleting of the refund bank accoun
 | bank | POST | `400` | There is no physical address for the customer or account for the provided country | [Request](sample%20messages/POST_400_bank_no_physical_address_for_the_customer_request.json) | Validate HTTP Status Code  | 
 
 
-<a name="Contact-API-REST-Reference"></a>
+<a name="Bank-API-REST-Reference"></a>
 ## Bank API REST Reference and URL endpoints
 
 | Environment | Scheme Authority | Mutual TLS (mTLS) authentication |
