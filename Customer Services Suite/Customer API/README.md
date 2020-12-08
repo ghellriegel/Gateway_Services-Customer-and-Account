@@ -93,7 +93,7 @@ The customer API provides general information about a customer. It is one of sev
 	```
 
 ### Test scenarios report template
-* Download [Test Scenarios Report Template](Customer%20API%20-%20Test%20Report%20Template.docx)
+* Download [Test Scenarios Report Template](Customer%20API%20-%20Test%20Report%20Template%20v1.1.docx)
 
 
 

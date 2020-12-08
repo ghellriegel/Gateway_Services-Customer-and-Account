@@ -98,5 +98,5 @@ The period API provides information about one or more periods for an identified 
 
 ### Test scenarios report template
 
-* Download [Test Scenarios Report Template](Period%20List%20API%20-%20Test%20Report%20Template_v1.docx)
+* Download [Test Scenarios Report Template](Period%20List%20API%20-%20Test%20Report%20Template_v1.2.docx)
 
