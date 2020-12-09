@@ -104,4 +104,4 @@ The contact API enables the creating, updating, and deleting of the contact deta
 
 ### Test scenarios report template
 
-* [Download Test Scenarios report template](Contact%20API%20-%20Test%20Report%20Template.docx)
+* [Download Test Scenarios report template](Contact%20API%20-%20Test%20Report%20Template_v1.3.docx)
