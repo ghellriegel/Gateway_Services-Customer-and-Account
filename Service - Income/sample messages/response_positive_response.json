@@ -1,79 +1,38 @@
 {
-   "IncomeProfile":[
-      {
-         "IncomeRequired":"2013-07-31",
-         "IncomeType":"ACC",
-         "IncomeSource":"",
-         "IncomeSourceID":"132057230",
-         "IncomeSourceIDType":"IRD",
-         "Amount":"1409.66",
-         "Deductions":"232.95",
-         "StudentLoan":"0.00",
-         "Donation":"0.00",
-         "ExtinguishedDonation":"0.00",
-         "FamilyTaxCredit":"0.00",
-         "EarningsNotLiableForACC":"0.00",
-         "ImputationCreditforDividend":"0.00"
-      },
-      {
-         "IncomeRequired":"2017-03-31",
-         "IncomeType":"SHREMP",
-         "IncomeSource":"",
-         "IncomeSourceID":"132057230",
-         "IncomeSourceIDType":"IRD",
-         "Amount":"87284.53",
-         "Deductions":"0.00",
-         "StudentLoan":"0.00",
-         "Donation":"0.00",
-         "ExtinguishedDonation":"0.00",
-         "FamilyTaxCredit":"0.00",
-         "EarningsNotLiableForACC":"0.00",
-         "ImputationCreditforDividend":"0.00"
-      },
-      {
-         "IncomeRequired":"2018-03-31",
-         "IncomeType":"NZINT",
-         "IncomeSource":"027-083-307-INC005",
-         "IncomeSourceID":"132057230",
-         "IncomeSourceIDType":"IRD",
-         "Amount":"14000.00",
-         "Deductions":"0.00",
-         "StudentLoan":"0.00",
-         "Donation":"0.00",
-         "ExtinguishedDonation":"0.00",
-         "FamilyTaxCredit":"0.00",
-         "EarningsNotLiableForACC":"0.00",
-         "ImputationCreditforDividend":"0.00"
-      },
-      {
-         "IncomeRequired":"2018-03-31",
-         "IncomeType":"PIE",
-         "IncomeSource":"",
-         "IncomeSourceID":"132057230",
-         "IncomeSourceIDType":"IRD",
-         "Amount":"829.75",
-         "Deductions":"145.21",
-         "StudentLoan":"0.00",
-         "Donation":"0.00",
-         "ExtinguishedDonation":"0.00",
-         "FamilyTaxCredit":"0.00",
-         "EarningsNotLiableForACC":"0.00",
-         "ImputationCreditforDividend":"0.00"
-      },
-      {
-         "IncomeRequired":"2018-08-31",
-         "IncomeType":"SALWAGE",
-         "IncomeSource":"",
-         "IncomeSourceID":"132057230",
-         "IncomeSourceIDType":"IRD",
-         "Amount":"1770.00",
-         "Deductions":"307.51",
-         "StudentLoan":"0.00",
-         "Donation":"0.00",
-         "ExtinguishedDonation":"0.00",
-         "FamilyTaxCredit":"0.00",
-         "EarningsNotLiableForACC":"0.00",
-         "ImputationCreditforDividend":"0.00"
-      }
-   ]
+    "IncomeProfile": [
+        {
+            "IncomeType": "PIE",
+            "IncomeSource": "Investment income payer",
+            "IncomeSourceID": "132057176",
+            "IncomeSourceIDType": "IRD",
+            "IncomeRequired": "2019-03-31",
+            "Amount": "1000.00",
+            "Deductions": "280.00",
+            "StudentLoan": "0.00",
+            "Donation": "0.00",
+            "ExtinguishedDonation": "0.00",
+            "FamilyTaxCredit": "0.00",
+            "EarningsNotLiableForACC": "0.00",
+            "ImputationCreditforDividend": "0.00",
+            "RateYearEnd": "0.00",
+            "RateChanged": false
+        },
+        {
+            "IncomeType": "PIE",
+            "IncomeSource": "Investment income payer",
+            "IncomeSourceID": "132057176",
+            "IncomeSourceIDType": "IRD",
+            "IncomeRequired": "2020-03-31",
+            "Amount": "70000.00",
+            "Deductions": "19600.00",
+            "StudentLoan": "0.00",
+            "Donation": "0.00",
+            "ExtinguishedDonation": "0.00",
+            "FamilyTaxCredit": "0.00",
+            "EarningsNotLiableForACC": "0.00",
+            "ImputationCreditforDividend": "0.00",
+            "RateYearEnd": "28.00",
+            "RateChanged": false
+        }
+    ]
 }
