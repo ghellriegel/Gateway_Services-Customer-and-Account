@@ -70,7 +70,7 @@ The Income API described in this build pack document provides a mechanism for ex
 | End point|  URL|
 |--|--|
  Landing Page | https://mock-ipr.ird.digitalpartner.services
- Service Path | https://mock-ipr.ird.digitalpartner.services/secure/gateway/income/list |
+ Service Path | https://mock-ipr.ird.digitalpartner.services/gateway/income/list |
 
 ### Income mock scenarios mindmap
 
