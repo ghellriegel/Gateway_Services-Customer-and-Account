@@ -98,6 +98,8 @@ The address API enables the creating, updating, and deleting of the address of a
 	Authorization: {JWT}
 	```
 
+### Test mock data
+* [Mock Test Data](../Test%20Details/) 
 
 <a name="test-environment-information"></a>
 ### Test scenarios report template

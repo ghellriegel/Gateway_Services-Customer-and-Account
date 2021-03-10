@@ -90,6 +90,9 @@ The bank account API enables the creating and deleting of the refund bank accoun
         Authorization: {JWT}
         ```
 		
+### Test mock data
+* [Mock Test Data](../Test%20Details/) 		
+		
 ### Test scenarios report template
 
 - [Download Test Scenarios report template](Bank%20API%20-%20Test%20Report%20Template_v1.2.docx) 

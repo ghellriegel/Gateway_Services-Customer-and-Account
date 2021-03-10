@@ -97,6 +97,8 @@ The name API enables the creating, updating, and deleting of the customer’s na
 	Authorization: {JWT}
 	```
 
+### Test mock data
+* [Mock Test Data](../Test%20Details/) 
 
 ### Test scenarios report template
 

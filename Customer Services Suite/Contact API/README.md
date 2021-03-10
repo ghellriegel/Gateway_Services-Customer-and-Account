@@ -102,6 +102,9 @@ The contact API enables the creating, updating, and deleting of the contact deta
         Authorization: {JWT}
         ```
 
+### Test mock data
+* [Mock Test Data](../Test%20Details/) 
+
 ### Test scenarios report template
 
 * [Download Test Scenarios report template](Contact%20API%20-%20Test%20Report%20Template_v1.3.docx)
