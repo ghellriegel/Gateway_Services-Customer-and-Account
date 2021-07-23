@@ -44,7 +44,7 @@ The bank account API enables the creating and deleting of the refund bank accoun
 
 | Environment | Scheme Authority | Mutual TLS (mTLS) authentication |
 | --- | --- | :---: |
-| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`| no |
+| Mock (DPS)| `https://customerservices.test.services.ird.govt.nz`| no |
 | Production (PROD) | `https://services.ird.govt.nz:4046`| yes |
 
 #### Bank API - `{Scheme Authority}/gateway/bank/{Service}`
@@ -60,7 +60,7 @@ The bank account API enables the creating and deleting of the refund bank accoun
 ## Mock environment information
 
 ### Mock emulated service URL
-* Landing Page https://mock-cus.ird.digitalpartner.services 
+* Landing Page https://customerservices.test.services.ird.govt.nz
 
 ### Bank mock scenarios mindmap
 

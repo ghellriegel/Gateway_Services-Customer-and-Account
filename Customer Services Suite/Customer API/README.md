@@ -46,7 +46,7 @@ The customer API provides general information about a customer. It is one of sev
 
 | Environment | Scheme Authority | Mutual TLS (mTLS) authentication |
 | --- | --- | :---: |
-| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`| no |
+| Mock (DPS)| `https://customerservices.test.services.ird.govt.nz`| no |
 | Production (PROD) | `https://services.ird.govt.nz:4046`| yes |
 
 #### Customer API - `{Scheme Authority}/gateway/customer/{Service}`
@@ -62,7 +62,7 @@ The customer API provides general information about a customer. It is one of sev
 ---
 
 ### Mock emulated service URL
-* Landing Page https://mock-cus.ird.digitalpartner.services 
+* Landing Page https://customerservices.test.services.ird.govt.nz
 
 ### Customer mock scenarios mindmap
 

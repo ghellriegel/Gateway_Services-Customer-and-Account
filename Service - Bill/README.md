@@ -49,8 +49,8 @@
 ### Mock emulated service URL
 |Description | URL|
 |---|---|
-| Landing Page | https://mock-bil.ird.digitalpartner.services|
-| Service Path | https://mock-bil.ird.digitalpartner.services/secure/gateway/bill/|
+| Landing Page | https://bill.test.services.ird.govt.nz|
+| Service Path | https://bill.test.services.ird.govt.nz/gateway/bill/|
  
 ### Mock environment authentication
    * Consumers of this mock service must be authenticated.

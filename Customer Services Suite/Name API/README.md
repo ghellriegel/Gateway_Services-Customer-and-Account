@@ -47,7 +47,7 @@ The name API enables the creating, updating, and deleting of the customer’s na
 
 | Environment | Scheme Authority | Mutual TLS (mTLS) authentication |
 | --- | --- | :---: |
-| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`| no |
+| Mock (DPS)| `https://customerservices.test.services.ird.govt.nz`| no |
 | Production (PROD) | `https://services.ird.govt.nz:4046`| yes |
 
 #### Name API - `{Scheme Authority}/gateway/name/{Service}`
@@ -66,7 +66,7 @@ The name API enables the creating, updating, and deleting of the customer’s na
 ## Mock environment information
 
 ### Mock emulated service URL
-* Landing Page https://mock-cus.ird.digitalpartner.services 
+* Landing Page https://customerservices.test.services.ird.govt.nz
 
 ### Name API mock scenarios mindmap
 

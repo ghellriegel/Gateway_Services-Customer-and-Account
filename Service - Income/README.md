@@ -69,8 +69,8 @@ The Income API described in this build pack document provides a mechanism for ex
 ### Mock emulated service URL
 | End point|  URL|
 |--|--|
- Landing Page | https://mock-ipr.ird.digitalpartner.services
- Service Path | https://mock-ipr.ird.digitalpartner.services/gateway/income/list |
+ Landing Page | https://income.test.services.ird.govt.nz
+ Service Path | https://income.test.services.ird.govt.nz/gateway/income/list |
 
 ### Income mock scenarios mindmap
 
