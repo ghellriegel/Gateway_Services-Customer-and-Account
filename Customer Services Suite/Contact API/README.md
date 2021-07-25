@@ -48,7 +48,7 @@ The contact API enables the creating, updating, and deleting of the contact deta
 
 | Environment | Scheme Authority | Mutual TLS (mTLS) authentication |
 | --- | --- | :---: |
-| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`| no |
+| Mock (DPS)| `https://customerservices.test.services.ird.govt.nz`| no |
 | Production (PROD) | `https://services.ird.govt.nz:4046`| yes |
 
 #### Contact API - `{Scheme Authority}/gateway/contact/{Service}`
@@ -71,7 +71,7 @@ The contact API enables the creating, updating, and deleting of the contact deta
 ---
 
 ### Mock emulated service URL
-* Landing Page https://mock-cus.ird.digitalpartner.services 
+* Landing Page https://customerservices.test.services.ird.govt.nz
 
 
 ### Contact mock scenarios mindmap

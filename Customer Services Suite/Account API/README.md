@@ -46,7 +46,7 @@ The account API provides either a list of accounts for an identified customer or
 
 | Environment | Scheme Authority | Mutual TLS (mTLS) authentication |
 | --- | --- | :---: |
-| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`| no |
+| Mock (DPS)| `https://customerservices.test.services.ird.govt.nz`| no |
 | Production (PROD) | `https://services.ird.govt.nz:4046`| yes |
 
 #### Account API - `{Scheme Authority}/gateway/Account/{Service}`

@@ -51,7 +51,7 @@ The address API enables the creating, updating, and deleting of the address of a
 
 | Environment | Scheme Authority | Mutual TLS (mTLS) authentication |
 | --- | --- | :---: |
-| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`| no |
+| Mock (DPS)| `https://customerservices.test.services.ird.govt.nz`| no |
 | Production (PROD) | `https://services.ird.govt.nz:4046`| yes |
 
 #### Address API - `{Scheme Authority}/gateway/address/{Service}`
@@ -68,7 +68,7 @@ The address API enables the creating, updating, and deleting of the address of a
 ## Mock environment information
 ---
 ### Mock emulated service URL
-* Landing Page https://mock-cus.ird.digitalpartner.services 
+* Landing Page https://customerservices.test.services.ird.govt.nz 
 
 ### Address mock scenarios mindmap
 

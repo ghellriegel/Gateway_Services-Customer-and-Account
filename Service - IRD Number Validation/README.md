@@ -57,7 +57,8 @@ This service supports the following message type:
 ### Mock emulated service URL
 | End point|  URL|
 |--|--|
-| Mock | https://mock-irv.ird.digitalpartner.services/secure/gateway/customer-service/validateIRD |
+| Landing Page | https://irdvalidation.test.services.ird.govt.nz/ |
+| ValidateIRD | https://irdvalidation.test.services.ird.govt.nz/gateway/customer-service/validateIRD |
 
 ### Mock scenarios mind map
 

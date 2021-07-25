@@ -47,7 +47,7 @@ The period API provides information about one or more periods for an identified 
 
 | Environment | Scheme Authority | mutual TLS |
 | --- | --- | :---: |
-| Mock (DPS)| `https://mock-cus.ird.digitalpartner.services`| no |
+| Mock (DPS)| `https://customerservices.test.services.ird.govt.nz`| no |
 | Production (PROD) | `https://services.ird.govt.nz:4046`| yes |
 
 <a Period="API-REST-Reference"></a>
@@ -65,7 +65,7 @@ The period API provides information about one or more periods for an identified 
 ## Mock environment information
 
 ### Mock emulated service URL landing page 
-* https://mock-cus.ird.digitalpartner.services
+* https://customerservices.test.services.ird.govt.nz
 
 ### Period mock scenarios mindmap
 
