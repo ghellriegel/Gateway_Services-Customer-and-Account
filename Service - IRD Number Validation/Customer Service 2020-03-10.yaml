@@ -23,7 +23,7 @@ paths:
       tags: 
         - Validate IRD number
       summary: Validate IRD number
-      description: ""
+      description: "14271260"
       operationId: validateIRDPOST
       consumes: 
         - 'application/json; charset=utf-8'
@@ -91,16 +91,16 @@ definitions:
           - FirstName
           - LastName
         properties: 
-          FirstName: 
+          FirstName: maria
             type: string
             description: '<p>First name of an individual</p>'
             maxLength: 255
             minLength: 1
-          MiddleName: 
+          MiddleName: pearl
             type: string
             description: '<p>Middle name for an individual</p>'
             maxLength: 255
-          LastName: 
+          LastName: solomon
             type: string
             description: '<p>Last name for an individual</p>'
             maxLength: 255
